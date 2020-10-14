@@ -8,4 +8,28 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/TitleMenu.unity
+    guid: 450517be24166ef4f9f6571d3a00c1ca
+  - enabled: 1
+    path: Assets/Scenes/Beginning.unity
+    guid: 88d74b28a43bb7749963a50af0c3f365
+  - enabled: 1
+    path: Assets/Scenes/Denial.unity
+    guid: 1487fc2e26aa95d41a9ae73dbbf68227
+  - enabled: 1
+    path: Assets/Scenes/Anger.unity
+    guid: bb6fbe023692a124b8540282b1f5be81
+  - enabled: 1
+    path: Assets/Scenes/Bargaining.unity
+    guid: 7a4f4f716cb0fdb45951cd6b883686e6
+  - enabled: 1
+    path: Assets/Scenes/Depression.unity
+    guid: 0980cfac8e9530b4dab73ec9f6c7a68f
+  - enabled: 1
+    path: Assets/Scenes/Acceptance.unity
+    guid: 7c99c0d3f86410f4297b4a44abc816f3
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: c030dff16c260bd4ba2232f32d77aa86
   m_configObjects: {}
