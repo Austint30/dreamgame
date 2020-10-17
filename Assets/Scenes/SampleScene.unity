@@ -1256,6 +1256,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1332599343}
+  - component: {fileID: 1332599344}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -1278,6 +1279,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1332599344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332599342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16f4225734c47e49aabe0c6a7beb8ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeCamera: {fileID: 0}
+  autoDetectCamera: 1
+  wrapWestEast: 1
+  spriteRenderer: {fileID: 1474330950}
+  scrollSpeedFactor: {x: 0.8, y: 1}
 --- !u!1 &1474330948
 GameObject:
   m_ObjectHideFlags: 0
@@ -1288,7 +1306,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1474330951}
   - component: {fileID: 1474330950}
-  - component: {fileID: 1474330949}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -1296,22 +1313,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1474330949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1474330948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b16f4225734c47e49aabe0c6a7beb8ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activeCamera: {fileID: 0}
-  autoDetectCamera: 1
-  wrapWestEast: 1
-  scrollSpeedFactor: {x: 0.8, y: 1}
 --- !u!212 &1474330950
 SpriteRenderer:
   m_ObjectHideFlags: 0
