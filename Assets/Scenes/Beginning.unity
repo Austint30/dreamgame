@@ -232,10 +232,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1951924347}
   - {fileID: 2017912434}
+<<<<<<< HEAD
   - {fileID: 1648683748}
   - {fileID: 879967246}
+=======
+>>>>>>> parent of fd4460f... IdleAnimation_Bukola
   m_Father: {fileID: 480307731}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -495,6 +497,7 @@ Transform:
 --- !u!1 &363506283
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &371155447
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,6 +667,8 @@ CanvasRenderer:
   m_GameObject: {fileID: 473028634}
   m_GameObject: {fileID: 371155447}
   m_CullTransparentMesh: 0
+=======
+>>>>>>> parent of fd4460f... IdleAnimation_Bukola
 --- !u!1 &480307727
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,6 +770,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+<<<<<<< HEAD
 --- !u!1 &935473070
 --- !u!1 &879967245
 GameObject:
@@ -935,6 +941,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 879967245}
   m_CullTransparentMesh: 0
+=======
+>>>>>>> parent of fd4460f... IdleAnimation_Bukola
 --- !u!1 &1082890980
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,6 +1255,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1676256039}
   m_CullTransparentMesh: 0
+<<<<<<< HEAD
 --- !u!1 &1711848112
 --- !u!1 &1951924346
 GameObject:
@@ -1453,6 +1462,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+=======
+>>>>>>> parent of fd4460f... IdleAnimation_Bukola
 --- !u!1 &2017912433
 GameObject:
   m_ObjectHideFlags: 0
@@ -1485,7 +1496,7 @@ RectTransform:
   m_Children:
   - {fileID: 1676256040}
   m_Father: {fileID: 183860119}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
