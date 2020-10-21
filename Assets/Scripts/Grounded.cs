@@ -40,6 +40,7 @@ public class Grounded : MonoBehaviour
         }
         if(collision.collider.tag == "Platform")
         {
+            Player.GetComponent<Player>().isGrounded = false;
             Player.transform.parent = null;
         }
     }
