@@ -5,6 +5,7 @@ using UnityEngine;
 public class Grounded : MonoBehaviour
 {
     GameObject Player;
+ 
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,11 @@ public class Grounded : MonoBehaviour
         {
             Player.GetComponent<Player>().isGrounded = true;
         }
+        if (collision.collider.tag == "Platform")
+        {
+            Player.GetComponent<Player>().isGrounded = true;
+            Player.transform.parent = collision.gameObject.transform;
+        }
     }
 
 
@@ -31,6 +37,10 @@ public class Grounded : MonoBehaviour
         if (collision.collider.tag == "Ground")
         {
             Player.GetComponent<Player>().isGrounded = false;
+        }
+        if(collision.collider.tag == "Platform")
+        {
+            Player.transform.parent = null;
         }
     }
 }
