@@ -25,8 +25,12 @@ public class Player : MonoBehaviour
     {
         Jump();
         _horizontalInput = Input.GetAxis("Horizontal");
+    }
+
+    void FixedUpdate(){
         transform.Translate(new Vector3(_horizontalInput, 0, 0) * _speed * Time.deltaTime);
     }
+
     void Jump()
     {
         if (isGrounded)
