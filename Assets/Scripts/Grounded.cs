@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Grounded : MonoBehaviour
 {
-    GameObject Player;
- 
+    public GameObject Player;
+    private Player playerScript;
+
     // Start is called before the first frame update
     void Start()
     {
-        Player = gameObject.transform.parent.gameObject;
+       playerScript = Player.GetComponent<Player>();
     }
 
     // Update is called once per frame
@@ -18,29 +19,33 @@ public class Grounded : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collision.collider.tag == "Ground")
+        playerScript.groundObj = collider.gameObject;
+        if (collider.tag == "Ground")
         {
-            Player.GetComponent<Player>().isGrounded = true;
+            playerScript.isGrounded = true;
         }
-        if (collision.collider.tag == "Platform")
+        if (collider.tag == "Platform")
         {
-            Player.GetComponent<Player>().isGrounded = true;
-            Player.transform.parent = collision.gameObject.transform;
+            playerScript.isGrounded = true;
+            Player.transform.parent = collider.gameObject.transform;
         }
     }
 
 
-    private void OnCollisionExit2D(Collision2D collision)
+    void OnTriggerExit2D(Collider2D collider)
     {
-        if (collision.collider.tag == "Ground")
+        playerScript.groundObj = collider.gameObject;
+        if (collider.tag == "Ground")
         {
-            Player.GetComponent<Player>().isGrounded = false;
+            playerScript.isGrounded = false;
         }
-        if(collision.collider.tag == "Platform")
+        if(collider.tag == "Platform")
         {
-            Player.GetComponent<Player>().isGrounded = false;
+            Platform platformScript = collider.gameObject.GetComponent<Platform>();
+            Rigidbody2D playerRb = Player.GetComponent<Rigidbody2D>();
+            playerScript.isGrounded = false;
             Player.transform.parent = null;
         }
     }
