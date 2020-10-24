@@ -7,10 +7,10 @@ public class damagePlayer : MonoBehaviour  {
     public int playerHealth =30;
     int damage = 10;
 
-    void Start()[
-        print(playerHealth) ;
+    void Start(){
+        Debug.Log(playerHealth) ;
 
-    ]
+    }
 
     void OnCollisionEnter(Collision _collision){
         if (_collision.gameObject.tag == "enemyDong"){
