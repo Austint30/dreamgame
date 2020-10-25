@@ -5,16 +5,24 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField]
-    private float _speed;
+    private float _speed = 7f;
 
     [SerializeField]
     private float _horizontalInput;
     [SerializeField]
     private float _verticalForce;
     [SerializeField]
-    private int maxJumps = 2;
+    private bool doubleJumpEnabled = false;
     [SerializeField]
-    private float jumpHeight = 2;
+    private float groundJumpHeight = 2f;
+    [SerializeField]
+    private float airJumpHeight = 4f;
+    [SerializeField]
+    private float gravityScale = 3f;
+    [SerializeField]
+    private float terminalVelocity = 20f;
+    [SerializeField]
+    private int maxJumps = 2;
 
     public bool isGrounded = false;
 
@@ -22,13 +30,16 @@ public class Player : MonoBehaviour
     public GameObject groundObj;
     private Rigidbody2D _rb;
     private Vector2 _lastObjectVelocity = Vector2.zero;
-    private int _currentJumps = 0;
     private bool isJumping = false;
+    private bool _hasDoubleJumped = false;
+    private int currJumps = 0;
+    private bool hasJumped = false;
 
     // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _rb.gravityScale = gravityScale;
     }
 
     // Update is called once per frame
@@ -48,7 +59,7 @@ public class Player : MonoBehaviour
                 _lastObjectVelocity = platformScript.velocity;
             }
             // Match the velocity of objects with rigidbodies
-            else if (groundObj != null && groundObj.GetComponent<Rigidbody2D>()){ // TODO: Figure out a way not to call GetComponent every FiedUpdate
+            else if (groundObj != null && groundObj.GetComponent<Rigidbody2D>()){ // TODO: Figure out a way not to call GetComponent every FixedUpdate
                 Rigidbody2D groundRb = groundObj.GetComponent<Rigidbody2D>();
                 _lastObjectVelocity = new Vector2(groundRb.velocity.x, groundRb.velocity.y);
             }
@@ -59,24 +70,49 @@ public class Player : MonoBehaviour
                 _lastObjectVelocity = Vector2.zero;
             }
         }
-        transform.Translate(new Vector3(_horizontalInput, 0, 0) * _speed * Time.deltaTime);
+        HandleMoving();
+        // TODO: Add terminal velocity
+    }
 
+    void HandleMoving(){
+        Vector3 translation = new Vector3(_horizontalInput, 0, 0) * _speed * Time.deltaTime;
+
+        // TODO: Implement more stable horizontal movement on angles surfaces
+        if (isGrounded){
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector3.down, 1f);
+            Debug.DrawLine(transform.position, transform.position + Vector3.down * 1f);
+            Quaternion hitAngle = Quaternion.FromToRotation(Vector3.forward, hit.normal);
+            Debug.Log(Mathf.Abs(Quaternion.Angle(hitAngle, Quaternion.Euler(0, 0, 0))));
+            // if (Mathf.Abs(Quaternion.Angle(hitAngle, Quaternion.Euler(0, 0, 0)) <  ))
+            translation = hitAngle * translation;
+        }
+        transform.Translate(translation);
     }
 
     void HandleJumping()
     {
-        if (isGrounded)
-        {
-            if (!isJumping){
-                _currentJumps = 0;
-            }
-            if (Input.GetButtonDown("Jump"))
-                Jump();
-            else if (Input.GetButtonUp("Jump")){
-                isJumping = false;
-                CancelJump();
-            }
+        if (Input.GetButtonDown("Jump")){
+            isJumping = true;
+        }
+        if (Input.GetButtonUp("Jump")){
             isJumping = false;
+        }
+        if (isGrounded) {
+            currJumps = 0;
+            hasJumped = false;
+        };
+        if (Input.GetButtonDown("Jump"))
+        {
+            Jump();
+        }
+        if (!isGrounded && !isJumping){ // Allows player to control height of jump
+            if (_rb.velocity.y > 0){
+                _rb.gravityScale = gravityScale * 4;
+            }
+            else
+            {
+                _rb.gravityScale = gravityScale;
+            }
         }
     }
 
@@ -88,10 +124,21 @@ public class Player : MonoBehaviour
     }
 
     void Jump(){
-        isJumping = true;
-        _currentJumps++;
-        if (_currentJumps < maxJumps){
-            _rb.velocity = new Vector2(_lastObjectVelocity.x, _lastObjectVelocity.y + HeightToVelocity(jumpHeight));
+        currJumps++;
+        hasJumped = true;
+        if (isGrounded){
+            _rb.velocity = new Vector2(_lastObjectVelocity.x, _lastObjectVelocity.y + HeightToVelocity(groundJumpHeight));
+        }
+        // Air jumping cancels existing horizontal velocity in opposite direction
+        else if (currJumps <= maxJumps && hasJumped)
+        {
+             float horizontalVel;
+
+            // If horizontalInput and rigidbody velocity are the same sign, horizontal velocity is preserved. Otherwise velocity is cancelled.
+            // If player jumps off of a fast moving platform and wants to move the opposite direction in the air, this will make it possible upon
+            // double-jumping to move the opposite direction of the motion of the platform.
+            horizontalVel = ((_horizontalInput >= 0) ^ (_rb.velocity.x < 0)) ? _rb.velocity.x : 0f;
+            _rb.velocity = new Vector2(horizontalVel, _lastObjectVelocity.y + HeightToVelocity(airJumpHeight));
         }
     }
 
