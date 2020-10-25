@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5c32a1fa08d224ad79f12a7b1d5003e9
+guid: d4fd4a3d83eb54cd1904acc0264a59a6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5164015780626112804
-    second: wood_floor_brown_0
+      213: -1290075772231255896
+    second: wood_beige_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -49,7 +49,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 240
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -92,7 +92,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wood_floor_brown_0
+      name: wood_beige_0
       rect:
         serializedVersion: 2
         x: 0
@@ -106,8 +106,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cded445f10bb558b0800000000000000
-      internalID: -5164015780626112804
+      spriteID: 8a871d69beab81ee0800000000000000
+      internalID: -1290075772231255896
       vertices: []
       indices: 
       edges: []

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: wood_floor_brown_0
+  m_Name: wood_beige_0
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -5164015780626112804, guid: 5c32a1fa08d224ad79f12a7b1d5003e9, type: 3}
+  m_Sprite: {fileID: -1290075772231255896, guid: d4fd4a3d83eb54cd1904acc0264a59a6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
