@@ -12,8 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleMenu.unity
     guid: 450517be24166ef4f9f6571d3a00c1ca
   - enabled: 1
-    path: Assets/Scenes/Beginning.unity
-    guid: 88d74b28a43bb7749963a50af0c3f365
+    path: Assets/Scenes/Prototype1-BeginningScene.unity
+    guid: cfba3466cda6dcd458975611b591e1de
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: Assets/Scenes/Prototype1-Beginning.unity
+    guid: fa84475dd23c8ce4e9a18bcdac3b9430
   - enabled: 1
     path: Assets/Scenes/Denial.unity
     guid: 1487fc2e26aa95d41a9ae73dbbf68227
