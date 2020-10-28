@@ -8,4 +8,9 @@ public class MainMenuButtonsScript : MonoBehaviour
     public void PlayGame () {
         SceneManager.LoadScene(2); //will have to change this with where current player last saved if already started game
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
