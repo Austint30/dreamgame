@@ -1,4 +1,4 @@
-using UnityEngine; 
+/*using UnityEngine; 
 using System.Collections;
 
 public class damagePlayer : MonoBehaviour  {
@@ -17,4 +17,4 @@ public class damagePlayer : MonoBehaviour  {
             print("player just touched something weird and health left" + playerHealth);
         }
     }
-}
+}*/
