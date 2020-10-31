@@ -40,6 +40,7 @@ public class Player : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         _rb.gravityScale = gravityScale;
+        gameObject.tag = "Player";
     }
 
     // Update is called once per frame

@@ -22,6 +22,16 @@ namespace DialogueSystem
             }
         }
 
+        public void setA(bool active){
+            gameObject.SetActive(active);
+
+            Update();
+        }
+
+        void Update(){
+
+        }
+
         void OnTriggerStay(Collider other){
             
             //Can change keycode to whatever
@@ -31,7 +41,7 @@ namespace DialogueSystem
             }
         }
 
-        private IEnumerator dialogueSequence()
+        public IEnumerator dialogueSequence()
         {
             for(int i = 0; i < transform.childCount; i++){
                 Deactivate();
