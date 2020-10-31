@@ -47,6 +47,11 @@ public class Player : MonoBehaviour
     {
         HandleJumping();
         _horizontalInput = Input.GetAxis("Horizontal");
+
+        //handle quit game at any point in the game, so as to not get stuck
+        if(Input.GetKeyDown(KeyCode.Q)){
+            Application.Quit();
+        }
     }
 
     void FixedUpdate(){
@@ -150,4 +155,7 @@ public class Player : MonoBehaviour
         float vel = Mathf.Sqrt(2 * Mathf.Abs(grav) * height);
         return vel;
     }
+
+
+    
 }
