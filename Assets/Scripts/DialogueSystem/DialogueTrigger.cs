@@ -6,14 +6,13 @@ namespace DialogueSystem{
 public class DialogueTrigger : MonoBehaviour
 {
 
-    [SerializeField]private DialogueHolder dH;
+    [SerializeField]private GameObject dH;
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter(Collider other)
      {
-         if (other.tag == "Player" && Input.GetKeyDown(KeyCode.Return)) 
+         if (Input.GetKeyDown(KeyCode.Return)) 
          {
-             dH.setA(true);
-            StartCoroutine(dH.dialogueSequence());
+             dH.SetActive(true);
          }
   
      }

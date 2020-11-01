@@ -136,6 +136,7 @@ public class Player : MonoBehaviour
             _rb.velocity = new Vector2(_lastObjectVelocity.x, _lastObjectVelocity.y + HeightToVelocity(groundJumpHeight));
         }
         // Air jumping cancels existing horizontal velocity in opposite direction
+        //
         else if (currJumps <= maxJumps && hasJumped)
         {
              float horizontalVel;
@@ -145,6 +146,10 @@ public class Player : MonoBehaviour
             // double-jumping to move the opposite direction of the motion of the platform.
             horizontalVel = ((_horizontalInput >= 0) ^ (_rb.velocity.x < 0)) ? _rb.velocity.x : 0f;
             _rb.velocity = new Vector2(horizontalVel, _lastObjectVelocity.y + HeightToVelocity(airJumpHeight));
+        }
+        else{
+            //lets player jump up to maxJumps each iteration and not just stop after maxJumps has been hit once
+            currJumps = 0;
         }
     }
 
