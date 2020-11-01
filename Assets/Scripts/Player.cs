@@ -88,7 +88,7 @@ public class Player : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector3.down, 1f);
             Debug.DrawLine(transform.position, transform.position + Vector3.down * 1f);
             Quaternion hitAngle = Quaternion.FromToRotation(Vector3.forward, hit.normal);
-            Debug.Log(Mathf.Abs(Quaternion.Angle(hitAngle, Quaternion.Euler(0, 0, 0))));
+            // Debug.Log(Mathf.Abs(Quaternion.Angle(hitAngle, Quaternion.Euler(0, 0, 0))));
             // if (Mathf.Abs(Quaternion.Angle(hitAngle, Quaternion.Euler(0, 0, 0)) <  ))
             translation = hitAngle * translation;
         }
@@ -97,19 +97,17 @@ public class Player : MonoBehaviour
 
     void HandleJumping()
     {
-        if (Input.GetButtonDown("Jump")){
-            isJumping = true;
-        }
         if (Input.GetButtonUp("Jump")){
             isJumping = false;
         }
-        if (isGrounded) {
-            currJumps = 0;
-            hasJumped = false;
-        };
         if (Input.GetButtonDown("Jump"))
         {
+            isJumping = true;
             Jump();
+        }
+        else if (isGrounded && !isJumping){
+            currJumps = 0;
+            hasJumped = false;
         }
         if (!isGrounded && !isJumping){ // Allows player to control height of jump
             if (_rb.velocity.y > 0){
@@ -119,13 +117,6 @@ public class Player : MonoBehaviour
             {
                 _rb.gravityScale = gravityScale;
             }
-        }
-    }
-
-    // Cancel a jump early while character is moving in the upward direction
-    void CancelJump(){
-        if (_rb.velocity.y > 0){
-            _rb.velocity = new Vector2(_lastObjectVelocity.x, _lastObjectVelocity.y);
         }
     }
 
@@ -146,10 +137,6 @@ public class Player : MonoBehaviour
             // double-jumping to move the opposite direction of the motion of the platform.
             horizontalVel = ((_horizontalInput >= 0) ^ (_rb.velocity.x < 0)) ? _rb.velocity.x : 0f;
             _rb.velocity = new Vector2(horizontalVel, _lastObjectVelocity.y + HeightToVelocity(airJumpHeight));
-        }
-        else{
-            //lets player jump up to maxJumps each iteration and not just stop after maxJumps has been hit once
-            currJumps = 0;
         }
     }
 
