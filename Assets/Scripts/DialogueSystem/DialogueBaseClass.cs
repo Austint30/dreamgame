@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-namespace DialogueSystem
-{
+// namespace DialogueSystem
+// {
     public class DialogueBaseClass : MonoBehaviour
     {
         public bool finished {get; private set;}
@@ -36,5 +36,5 @@ namespace DialogueSystem
         }
     }
 
-}
+// }
 
