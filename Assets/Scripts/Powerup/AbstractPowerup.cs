@@ -4,6 +4,11 @@ using UnityEngine;
 
 public abstract class AbstractPowerup : MonoBehaviour
 {
-
-    public abstract void Initialize();
+    [Tooltip("The sprite used when the player hasn't collected the powerup yet. Uncollected sprite is made invisible upon initialization.")]
+    public SpriteRenderer uncollectedSprite;
+    public virtual void Initialize(){
+        if (uncollectedSprite != null){
+            uncollectedSprite.enabled = false; // Disable sprite visible when not collected by player
+        }
+    }
 }

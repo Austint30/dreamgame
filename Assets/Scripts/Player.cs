@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField]
-    private float _speed = 7f;
+    public float speed = 7f;
 
     [SerializeField]
     private float _horizontalInput;
@@ -79,7 +78,7 @@ public class Player : MonoBehaviour
     }
 
     void HandleMoving(){
-        Vector3 translation = new Vector3(_horizontalInput, 0, 0) * _speed * Time.deltaTime;
+        Vector3 translation = new Vector3(_horizontalInput, 0, 0) * speed * Time.deltaTime;
 
         // TODO: Implement more stable horizontal movement on angles surfaces
         if (isGrounded){
