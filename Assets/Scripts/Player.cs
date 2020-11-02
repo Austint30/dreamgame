@@ -18,8 +18,7 @@ public class Player : MonoBehaviour
     private float gravityScale = 3f;
     [SerializeField]
     private float terminalVelocity = 20f;
-    [SerializeField]
-    private int maxJumps = 2;
+    public int maxJumps = 2;
 
     public bool isGrounded = false;
 
