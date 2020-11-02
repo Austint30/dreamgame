@@ -23,7 +23,6 @@ public class PowerupManager : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log("Trigger active: " + other.transform.tag);
         if (other.transform.tag == "Powerup"){
             GrabPowerup(other.transform);
         }
@@ -35,11 +34,14 @@ public class PowerupManager : MonoBehaviour
             return;
         }
         SpriteRenderer sr = objectTransform.GetComponent<SpriteRenderer>();
+        AbstractPowerup pScript = objectTransform.GetComponent<AbstractPowerup>();
         objectTransform.parent = powerupCollection;
         objectTransform.localPosition = Vector3.zero;
         if (sr != null){
             sr.sortingOrder = powerupSpriteSortingOrder;
         }
-        // TODO: Call Powerup's script to activate and initialize the item
+        if (pScript){
+            pScript.Initialize();
+        }
     }
 }

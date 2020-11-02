@@ -333,6 +333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerupCollection: {fileID: 3839181335093750977}
+  powerupSpriteSortingOrder: 11
 --- !u!61 &476839810
 BoxCollider2D:
   m_ObjectHideFlags: 0
