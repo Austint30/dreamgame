@@ -204,7 +204,7 @@ Transform:
   m_LocalScale: {x: 0.69971997, y: 0.62475, z: 0.9996}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &166734088
 BoxCollider2D:
@@ -232,6 +232,63 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.8, y: 7.2}
   m_EdgeRadius: 0
+--- !u!1001 &528845799
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7489008532611440641, guid: 12363271d1ff12e45a9331ae1770289b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.696826
+      objectReference: {fileID: 0}
+    - target: {fileID: 7489008532611440641, guid: 12363271d1ff12e45a9331ae1770289b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.1817055
+      objectReference: {fileID: 0}
+    - target: {fileID: 7489008532611440641, guid: 12363271d1ff12e45a9331ae1770289b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7489008532611440641, guid: 12363271d1ff12e45a9331ae1770289b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7489008532611440641, guid: 12363271d1ff12e45a9331ae1770289b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7489008532611440641, guid: 12363271d1ff12e45a9331ae1770289b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7489008532611440641, guid: 12363271d1ff12e45a9331ae1770289b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7489008532611440641, guid: 12363271d1ff12e45a9331ae1770289b, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7489008532611440641, guid: 12363271d1ff12e45a9331ae1770289b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7489008532611440641, guid: 12363271d1ff12e45a9331ae1770289b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7489008532611440641, guid: 12363271d1ff12e45a9331ae1770289b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7489008532611440643, guid: 12363271d1ff12e45a9331ae1770289b, type: 3}
+      propertyPath: m_Name
+      value: '[Powerup] AirJump'
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12363271d1ff12e45a9331ae1770289b, type: 3}
 --- !u!1001 &637301956
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -835,7 +892,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1165673567 stripped
 Transform:
@@ -871,7 +928,7 @@ Transform:
   m_Children:
   - {fileID: 1165673567}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1386708763
 GameObject:
@@ -1011,7 +1068,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1557188800
 GameObject:
@@ -1107,7 +1164,7 @@ Transform:
   m_LocalScale: {x: 41.929646, y: 20.000822, z: 1.02}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1662037079
 GameObject:
@@ -1173,7 +1230,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2017950424
 GameObject:
@@ -1255,7 +1312,7 @@ Transform:
   m_LocalScale: {x: 2.2875, y: 2.85, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2104068684
 GameObject:
@@ -1301,60 +1358,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &7489008532442219747
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7489008532611440641, guid: 12363271d1ff12e45a9331ae1770289b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 13.97
-      objectReference: {fileID: 0}
-    - target: {fileID: 7489008532611440641, guid: 12363271d1ff12e45a9331ae1770289b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 7489008532611440641, guid: 12363271d1ff12e45a9331ae1770289b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7489008532611440641, guid: 12363271d1ff12e45a9331ae1770289b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7489008532611440641, guid: 12363271d1ff12e45a9331ae1770289b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7489008532611440641, guid: 12363271d1ff12e45a9331ae1770289b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7489008532611440641, guid: 12363271d1ff12e45a9331ae1770289b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7489008532611440641, guid: 12363271d1ff12e45a9331ae1770289b, type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7489008532611440641, guid: 12363271d1ff12e45a9331ae1770289b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7489008532611440641, guid: 12363271d1ff12e45a9331ae1770289b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7489008532611440641, guid: 12363271d1ff12e45a9331ae1770289b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7489008532611440643, guid: 12363271d1ff12e45a9331ae1770289b, type: 3}
-      propertyPath: m_Name
-      value: '[Powerup] AirJump'
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 12363271d1ff12e45a9331ae1770289b, type: 3}
