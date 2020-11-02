@@ -23,7 +23,7 @@ public class PowerupManager : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        if (other.transform.tag == "Powerup"){
+        if (other.transform.GetComponent<AbstractPowerup>() != null){
             GrabPowerup(other.transform);
         }
     }
