@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField]
-    private float _speed = 7f;
+    public float speed = 7f;
 
     [SerializeField]
     private float _horizontalInput;
     [SerializeField]
     private float _verticalForce;
-    [SerializeField]
-    private bool doubleJumpEnabled = false;
     [SerializeField]
     private float groundJumpHeight = 2f;
     [SerializeField]
@@ -21,8 +18,7 @@ public class Player : MonoBehaviour
     private float gravityScale = 3f;
     [SerializeField]
     private float terminalVelocity = 20f;
-    [SerializeField]
-    private int maxJumps = 2;
+    public int maxJumps = 2;
 
     public bool isGrounded = false;
 
@@ -40,6 +36,7 @@ public class Player : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         _rb.gravityScale = gravityScale;
+        gameObject.tag = "Player";
     }
 
     // Update is called once per frame
@@ -47,6 +44,11 @@ public class Player : MonoBehaviour
     {
         HandleJumping();
         _horizontalInput = Input.GetAxis("Horizontal");
+
+        //handle quit game at any point in the game, so as to not get stuck
+        if(Input.GetKeyDown(KeyCode.Q)){
+            Application.Quit();
+        }
     }
 
     void FixedUpdate(){
@@ -75,14 +77,14 @@ public class Player : MonoBehaviour
     }
 
     void HandleMoving(){
-        Vector3 translation = new Vector3(_horizontalInput, 0, 0) * _speed * Time.deltaTime;
+        Vector3 translation = new Vector3(_horizontalInput, 0, 0) * speed * Time.deltaTime;
 
         // TODO: Implement more stable horizontal movement on angles surfaces
         if (isGrounded){
             RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector3.down, 1f);
             Debug.DrawLine(transform.position, transform.position + Vector3.down * 1f);
             Quaternion hitAngle = Quaternion.FromToRotation(Vector3.forward, hit.normal);
-            Debug.Log(Mathf.Abs(Quaternion.Angle(hitAngle, Quaternion.Euler(0, 0, 0))));
+            // Debug.Log(Mathf.Abs(Quaternion.Angle(hitAngle, Quaternion.Euler(0, 0, 0))));
             // if (Mathf.Abs(Quaternion.Angle(hitAngle, Quaternion.Euler(0, 0, 0)) <  ))
             translation = hitAngle * translation;
         }
@@ -91,19 +93,17 @@ public class Player : MonoBehaviour
 
     void HandleJumping()
     {
-        if (Input.GetButtonDown("Jump")){
-            isJumping = true;
-        }
         if (Input.GetButtonUp("Jump")){
             isJumping = false;
         }
-        if (isGrounded) {
-            currJumps = 0;
-            hasJumped = false;
-        };
         if (Input.GetButtonDown("Jump"))
         {
+            isJumping = true;
             Jump();
+        }
+        else if (isGrounded && !isJumping){
+            currJumps = 0;
+            hasJumped = false;
         }
         if (!isGrounded && !isJumping){ // Allows player to control height of jump
             if (_rb.velocity.y > 0){
@@ -116,13 +116,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    // Cancel a jump early while character is moving in the upward direction
-    void CancelJump(){
-        if (_rb.velocity.y > 0){
-            _rb.velocity = new Vector2(_lastObjectVelocity.x, _lastObjectVelocity.y);
-        }
-    }
-
     void Jump(){
         currJumps++;
         hasJumped = true;
@@ -130,6 +123,7 @@ public class Player : MonoBehaviour
             _rb.velocity = new Vector2(_lastObjectVelocity.x, _lastObjectVelocity.y + HeightToVelocity(groundJumpHeight));
         }
         // Air jumping cancels existing horizontal velocity in opposite direction
+        //
         else if (currJumps <= maxJumps && hasJumped)
         {
              float horizontalVel;
@@ -142,6 +136,15 @@ public class Player : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter2D (Collider2D col){
+        switch(col.gameObject.name){
+            case "door_closed":
+                DialogueTrigger.disabled = false;
+                break;
+
+        }
+    }
+
     // Calculates how strong the velocity has to be to reach a specific height
     // Allows game to change gravity without
     // Uses the kinematic formula vi = sqrt(2gy)
@@ -150,4 +153,7 @@ public class Player : MonoBehaviour
         float vel = Mathf.Sqrt(2 * Mathf.Abs(grav) * height);
         return vel;
     }
+
+
+    
 }
