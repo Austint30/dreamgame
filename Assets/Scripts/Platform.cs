@@ -7,16 +7,8 @@ public class Platform : MonoBehaviour
     public Transform pos1, pos2;
     public float speed;
     public Transform startPos;
-    public Vector2 velocity {
-        get
-        {
-            return _velocity;
-        }
-    }
 
-    private Vector3 nextPos;
-    private Vector3 lastPlatformPos;
-    private Vector2 _velocity;
+    Vector3 nextPos;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +16,7 @@ public class Platform : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if(transform.position == pos1.position)
         {
@@ -35,10 +27,8 @@ public class Platform : MonoBehaviour
         {
             nextPos = pos1.position;
         }
-        lastPlatformPos = transform.position;
+
         transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
-        Vector3 velocity3 = (transform.position - lastPlatformPos) / Time.deltaTime;
-        _velocity = new Vector2(velocity3.x, velocity3.y);
     }
 
     private void OnDrawGizmos()
