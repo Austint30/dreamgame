@@ -144,7 +144,5 @@ public class Player : MonoBehaviour
         float vel = Mathf.Sqrt(2 * Mathf.Abs(grav) * height);
         return vel;
     }
-
-
     
 }
