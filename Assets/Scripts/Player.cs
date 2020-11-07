@@ -136,15 +136,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D (Collider2D col){
-        switch(col.gameObject.name){
-            case "door_closed":
-                DialogueTrigger.disabled = false;
-                break;
-
-        }
-    }
-
     // Calculates how strong the velocity has to be to reach a specific height
     // Allows game to change gravity without
     // Uses the kinematic formula vi = sqrt(2gy)
