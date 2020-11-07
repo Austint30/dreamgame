@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float terminalVelocity = 20f;
     public int maxJumps = 2;
+    [System.NonSerialized]
+    public bool disableInput = false;
 
     public bool isGrounded = false;
 
@@ -42,7 +44,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HandleJumping();
+        if (!disableInput)
+            HandleJumping();
         _horizontalInput = Input.GetAxis("Horizontal");
 
         //handle quit game at any point in the game, so as to not get stuck
@@ -72,7 +75,8 @@ public class Player : MonoBehaviour
                 _lastObjectVelocity = Vector2.zero;
             }
         }
-        HandleMoving();
+        if (!disableInput)
+            HandleMoving();
         // TODO: Add terminal velocity
     }
 
