@@ -398,7 +398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd4dec7fbf2cb94887c86bfd0d5f34e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: I should probably go to bed.... press enter
+  input: Maybe I should see what's going on outside.... press enter
   textColor: {r: 1, g: 1, b: 1, a: 0}
   textFont: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
   delayBetweenText: 0.1
@@ -501,7 +501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd4dec7fbf2cb94887c86bfd0d5f34e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: It's getting late.... press enter
+  input: Hmm something doesn't feel right.... press enter
   textColor: {r: 1, g: 1, b: 1, a: 0}
   textFont: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
   delayBetweenText: 0.1
@@ -1035,10 +1035,10 @@ Tilemap:
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 34
-    m_Data: {fileID: 11400000, guid: d9388ef64084248e7aec75f609d4f2f7, type: 2}
+    m_Data: {fileID: 11400000, guid: 19714dc631168664eaefd04c9d52a535, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 34
-    m_Data: {fileID: -4059326132435625780, guid: dffbd428153be487894eec25fc52e83d, type: 3}
+    m_Data: {fileID: -6712477537531036831, guid: 937c50fbd178a4241819a4baa5ea938d, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 34
     m_Data:
@@ -1152,7 +1152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd4dec7fbf2cb94887c86bfd0d5f34e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: I should probably go to bed.... press enter
+  input: I need to be able to see to open the door.... press enter
   textColor: {r: 1, g: 1, b: 1, a: 0}
   textFont: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
   delayBetweenText: 0.1
@@ -1346,7 +1346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd4dec7fbf2cb94887c86bfd0d5f34e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: It's locked ...press enter
+  input: Huh?? I can't see?? ...press enter
   textColor: {r: 1, g: 1, b: 1, a: 0}
   textFont: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
   delayBetweenText: 0.1
@@ -1548,7 +1548,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b0eac03c480b88a4a8c8f18695d2cb5b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5e703a3b56718f444920b6425ddb0787, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.416
   m_Pitch: 1
@@ -1748,7 +1748,7 @@ GameObject:
   - component: {fileID: 1557188802}
   - component: {fileID: 1557188801}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: Quad2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1787,7 +1787,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1f29afd9b6b63084e86515167609031f, type: 2}
+  - {fileID: 2100000, guid: 6299f82af7f0d8c478d3e0976e8ee463, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1914,11 +1914,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2917514576296812070, guid: 0b24d867a95ada049a3d72604ef24f00, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.4147463
+      value: -18.05
       objectReference: {fileID: 0}
     - target: {fileID: 2917514576296812070, guid: 0b24d867a95ada049a3d72604ef24f00, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.35255742
+      value: -3.89
       objectReference: {fileID: 0}
     - target: {fileID: 2917514576296812070, guid: 0b24d867a95ada049a3d72604ef24f00, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2222,8 +2222,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2017950426}
   - component: {fileID: 2017950425}
-  - component: {fileID: 2017950427}
-  - component: {fileID: 2017950428}
   m_Layer: 0
   m_Name: bed_brown
   m_TagString: Untagged
@@ -2271,7 +2269,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -5
-  m_Sprite: {fileID: 21300000, guid: bf4f9be39aac84506816396bdd4d45d4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 46e1d82d597ad49539a9e3c11f48008c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2296,45 +2294,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2017950427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2017950424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbda52da9477e4c48bc05f32d249e310, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneNumber: 8
---- !u!61 &2017950428
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2017950424}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.16632888}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.4, y: 2.4}
-    newSize: {x: 2.4, y: 2.4}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.4, y: 0.6157451}
-  m_EdgeRadius: 0
 --- !u!1 &2104068684
 GameObject:
   m_ObjectHideFlags: 0
