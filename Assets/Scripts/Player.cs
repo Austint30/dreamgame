@@ -6,10 +6,32 @@ public class Player : MonoBehaviour
 {
     public float speed = 7f;
 
+    public bool isJumping {
+        get {
+            return _isJumping;
+        }
+    }
+
+    public Vector2 lastObjectVelocity {
+        get {
+            return _lastObjectVelocity;
+        }
+    }
+
+    public int currentJumps {
+        get {
+            return _currJumps;
+        }
+    }
+
+    public float horizontalInput {
+        get {
+            return _horizontalInput;
+        }
+    }
+
     [SerializeField]
     private float _horizontalInput;
-    [SerializeField]
-    private float _verticalForce;
     [SerializeField]
     private float groundJumpHeight = 2f;
     [SerializeField]
@@ -21,16 +43,17 @@ public class Player : MonoBehaviour
     public int maxJumps = 2;
     [System.NonSerialized]
     public bool disableInput = false;
+    [System.NonSerialized]
+    public GameObject groundObj;
 
     public bool isGrounded = false;
 
-    [System.NonSerialized]
-    public GameObject groundObj;
-    private Rigidbody2D _rb;
+    private bool _isJumping = false;
     private Vector2 _lastObjectVelocity = Vector2.zero;
-    private bool isJumping = false;
+    private int _currJumps = 0;
+
+    private Rigidbody2D _rb;
     private bool _hasDoubleJumped = false;
-    private int currJumps = 0;
     private bool hasJumped = false;
 
     // Start is called before the first frame update
@@ -98,18 +121,18 @@ public class Player : MonoBehaviour
     void HandleJumping()
     {
         if (Input.GetButtonUp("Jump")){
-            isJumping = false;
+            _isJumping = false;
         }
         if (Input.GetButtonDown("Jump"))
         {
-            isJumping = true;
+            _isJumping = true;
             Jump();
         }
-        else if (isGrounded && !isJumping){
-            currJumps = 0;
+        else if (isGrounded && !_isJumping){
+            _currJumps = 0;
             hasJumped = false;
         }
-        if (!isGrounded && !isJumping){ // Allows player to control height of jump
+        if (!isGrounded && !_isJumping){ // Allows player to control height of jump
             if (_rb.velocity.y > 0){
                 _rb.gravityScale = gravityScale * 4;
             }
@@ -121,14 +144,14 @@ public class Player : MonoBehaviour
     }
 
     void Jump(){
-        currJumps++;
+        _currJumps++;
         hasJumped = true;
         if (isGrounded){
             _rb.velocity = new Vector2(_lastObjectVelocity.x, _lastObjectVelocity.y + HeightToVelocity(groundJumpHeight));
         }
         // Air jumping cancels existing horizontal velocity in opposite direction
         //
-        else if (currJumps <= maxJumps && hasJumped)
+        else if (_currJumps <= maxJumps && hasJumped)
         {
              float horizontalVel;
 
