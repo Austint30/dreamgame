@@ -36,8 +36,9 @@ public class GlassesPowerup : AbstractPowerup
     }
 
     public void ToggleActive(){
+        Debug.Log("ToggleActive called!");
         if (_activated) DeActivate();
-        if (!_activated) Activate();
+        else if (!_activated) Activate();
     }
 
     public void Activate(){
