@@ -20,7 +20,6 @@ public class DialogueTrigger : MonoBehaviour
     {
         if(callOnStay){
             if(Input.GetKeyDown(KeyCode.B)){
-                Debug.Log("Trigger");
                 trigger.SetActive (true);
                 var dialogueVar = trigger.GetComponent<DialogueHolder>();
                 StartCoroutine(dialogueVar.dialogueSequence());
@@ -30,7 +29,7 @@ public class DialogueTrigger : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D _col){
-        if (_col.gameObject.CompareTag ("Player") && isOnEnter) {
+        if (_col.gameObject.CompareTag ("DialogueTrigger") && isOnEnter) {
             trigger.SetActive (true);
             var dialogueVar = trigger.GetComponent<DialogueHolder>();
             StartCoroutine(dialogueVar.dialogueSequence());
@@ -39,7 +38,8 @@ public class DialogueTrigger : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D _col)
     {
-        if (_col.gameObject.CompareTag ("Player") && !isOnEnter) {
+        if (_col.gameObject.CompareTag ("DialogueTrigger") && !isOnEnter) {
+                Debug.Log("Trigger");
             callOnStay = true;
         }
     }

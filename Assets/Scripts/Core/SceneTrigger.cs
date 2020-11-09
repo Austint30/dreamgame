@@ -29,7 +29,7 @@ public class SceneTrigger : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D _col)
     {
-        if (_col.gameObject.CompareTag ("Player")) {
+        if (_col.gameObject.CompareTag ("DialogueTrigger")) {
             callOnStay = true;
         }
     }
