@@ -14,10 +14,12 @@ public class PlayerBoyAnimControl : MonoBehaviour
     private bool lastMovDirLeft = false;
     private bool hasJumped = true;
     private bool isFalling = false; // TODO: To be implemented with dedicated falling animation
-    // Start is called before the first frame update
-    void Start()
-    {
-
+    private bool isMoving = false;
+    private Vector3 lastPos;
+    
+    private void FixedUpdate() {
+        isMoving = transform.position != lastPos && Mathf.Abs(playerMovement.horizontalInput) > 0;
+        lastPos = transform.position;
     }
 
     // Update is called once per frame
@@ -26,7 +28,9 @@ public class PlayerBoyAnimControl : MonoBehaviour
         if (playerMovement.isGrounded && !playerMovement.isJumping){
             float walkSpeed = Mathf.Abs(playerMovement.horizontalInput);
             walkSpeed = walkSpeedCurve.Evaluate(walkSpeed);
-
+            if (!isMoving){
+                walkSpeed = 0;
+            }
             playerAnimator.SetFloat("WalkSpeed", walkSpeed);
         }
 

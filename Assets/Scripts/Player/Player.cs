@@ -31,8 +31,6 @@ public class Player : MonoBehaviour
     }
 
     [SerializeField]
-    private float _horizontalInput;
-    [SerializeField]
     private float groundJumpHeight = 2f;
     [SerializeField]
     private float airJumpHeight = 4f;
@@ -40,12 +38,16 @@ public class Player : MonoBehaviour
     private float gravityScale = 3f;
     [SerializeField]
     private float terminalVelocity = 20f;
+    [SerializeField]
+    private Collider2D wallCheckTrigger;
+
     public int maxJumps = 2;
     [System.NonSerialized]
     public bool disableInput = false;
     [System.NonSerialized]
     public GameObject groundObj;
 
+    private float _horizontalInput;
     public bool isGrounded = false;
 
     private bool _isJumping = false;
@@ -55,6 +57,8 @@ public class Player : MonoBehaviour
     private Rigidbody2D _rb;
     private bool _hasDoubleJumped = false;
     private bool hasJumped = false;
+    private bool hittingWall = false;
+    private int wallHitDir = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -104,6 +108,11 @@ public class Player : MonoBehaviour
     }
 
     void HandleMoving(){
+
+        // Stop translating character if wall is in the way. Prevents the character from "sinking" into the wall slightly when
+        // walking into wall.
+        if (GetMoveDir() == wallHitDir && hittingWall) return;
+
         Vector3 translation = new Vector3(_horizontalInput, 0, 0) * speed * Time.deltaTime;
 
         // TODO: Implement more stable horizontal movement on angles surfaces
@@ -171,5 +180,25 @@ public class Player : MonoBehaviour
         float vel = Mathf.Sqrt(2 * Mathf.Abs(grav) * height);
         return vel;
     }
+
+    public void OnWallCheckTriggerEnter(Collider2D other){
+        hittingWall = true;
+        wallHitDir = GetMoveDir();
+    }
+
+    public void OnWallCheckTriggerExit(Collider2D other){
+        hittingWall = false;
+    }
     
+    private int GetMoveDir(){
+        if (horizontalInput > 0)
+            return 1;
+        else if (horizontalInput < 0){
+            return -1;
+        }
+        else {
+            return 0;
+        }
+    }
+
 }
