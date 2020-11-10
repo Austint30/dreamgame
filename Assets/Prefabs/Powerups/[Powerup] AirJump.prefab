@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3580864421080469692}
   - component: {fileID: 5901172372945573264}
   m_Layer: 0
-  m_Name: UncollectedSprite
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4895,6 +4895,7 @@ GameObject:
   - component: {fileID: 7489008532611440641}
   - component: {fileID: 7489008532611440640}
   - component: {fileID: 7489008532611440647}
+  - component: {fileID: 1614500473313614289}
   m_Layer: 0
   m_Name: '[Powerup] AirJump'
   m_TagString: Powerup
@@ -4955,4 +4956,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1506301fdf58fae4883b53d74c508406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uncollectedSprite: {fileID: 4083827416718608628}
+  powerupIcon: {fileID: 4083827416718608628}
+--- !u!114 &1614500473313614289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7489008532611440643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffbfbb260dcc785428950be6f2e5bf15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: {fileID: 0}
+  isOnEnter: 0
