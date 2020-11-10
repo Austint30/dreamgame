@@ -35,7 +35,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ending.unity
     guid: c030dff16c260bd4ba2232f32d77aa86
-  - enabled: 1
-    path: Assets/Scenes/Aleenas Workspace/Green_room_testing.unity
-    guid: 2ee3491a4e245644882bac7f79d8470d
   m_configObjects: {}

@@ -7,7 +7,6 @@ TagManager:
   - Ground
   - Platform
   - Powerup
-  - DialogueTrigger
   layers:
   - Default
   - TransparentFX
