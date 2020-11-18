@@ -17,7 +17,7 @@ public class DoorTrigger : MonoBehaviour
             (restrictToTag.Length > 0 && restrictToTag == other.tag) ||
             (restrictToTag.Length <= 0 && other.GetComponent<Rigidbody>())
         ){
-            if (Input.GetButtonUp("Jump")){
+            if (Input.GetButtonDown("Jump")){
                 portal.Trigger(other.gameObject);
             }
         }

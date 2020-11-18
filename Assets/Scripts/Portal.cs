@@ -16,10 +16,38 @@ public class Portal : MonoBehaviour
     public GameObject transitionEnterObject;
     public GameObject transitionExitObject;
 
+    private AsyncOperation _levelLoadAsync;
+
     public void Trigger(GameObject passingObject){
+        passingObject.transform.parent = null;
+        Object.DontDestroyOnLoad(passingObject);
         //TODO: Implement transistion effect. Scene transition should happen after transition finishes.
-        SceneManager.LoadScene(destinationSceneNum);
+        StartCoroutine("LoadLevel", passingObject);
+        
+    }
+
+    private IEnumerator LoadLevel(GameObject passingObject){
+        _levelLoadAsync = SceneManager.LoadSceneAsync(destinationSceneNum, LoadSceneMode.Single);
+        while (!_levelLoadAsync.isDone){
+            Debug.Log("Loading scene \"" + destinationSceneNum + "\"");
+            yield return null;
+        }
+        // Level has loaded
+        Debug.Log("Level has finished loading!");
+
         GameObject[] portals = GameObject.FindGameObjectsWithTag("Portal");
-        Debug.Log("..." + passingObject.name);
+        bool found = false;
+        foreach (GameObject portal in portals)
+        {
+            Portal porScript = portal.GetComponent<Portal>();
+            if (porScript && porScript.uniqueLabel == destinationPortalLabel){
+                Debug.Log("Portal \"" + destinationPortalLabel + "\" found! Moving object to portal position...");
+                passingObject.transform.position = portal.transform.position;
+                found = true;
+            }
+        }
+        if (!found){
+            Debug.LogWarning("Portal destination \"" + destinationPortalLabel + "\" doesn't exist!");
+        }
     }
 }
