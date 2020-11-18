@@ -235,6 +235,8 @@ GameObject:
   - component: {fileID: 166734086}
   - component: {fileID: 166734088}
   - component: {fileID: 166734089}
+  - component: {fileID: 166734091}
+  - component: {fileID: 166734090}
   m_Layer: 0
   m_Name: door_closed
   m_TagString: Untagged
@@ -347,6 +349,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trigger: {fileID: 1161374570}
   isOnEnter: 0
+--- !u!114 &166734090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166734085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3caffb1a217641e4383748eef87fa32b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  restrictToTag: Player
+--- !u!114 &166734091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166734085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aad473517d5cc54c8f4a2603b10cb9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uniqueLabel: exit
+  destinationSceneNum: 9
+  destinationPortalLabel: start
+  transitionEnterObject: {fileID: 0}
+  transitionExitObject: {fileID: 0}
 --- !u!1 &181364827
 GameObject:
   m_ObjectHideFlags: 0
