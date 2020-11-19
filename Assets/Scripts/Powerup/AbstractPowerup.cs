@@ -10,6 +10,7 @@ public abstract class AbstractPowerup : MonoBehaviour
         Animator animator = powerupIcon.GetComponent<Animator>();
         if (powerupIcon != null && powerupIcon.transform.GetComponent<AbstractPowerup>() == null){ // Ensure we are not disabling the gameobject that the powerup script is connected to.
             powerupIcon.gameObject.SetActive(false); // Disable sprite visible when not collected by player.
+            SoundHub.PlaySound(SoundHub.Sound.PowerupSound);
         }
     }
 }

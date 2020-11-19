@@ -13,4 +13,8 @@ public class MainMenuButtonsScript : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void PlayMenuSound(){
+        SoundHub.PlaySound(SoundHub.Sound.MenuButtonSound);
+    }
 }
