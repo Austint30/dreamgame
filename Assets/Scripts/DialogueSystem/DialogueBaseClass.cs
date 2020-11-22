@@ -18,10 +18,10 @@ using UnityEngine.UI;
 
             for(int i = 0; i < input.Length; i++){
                 textHolder.text += input[i];
-                // if(i%soundDelay == 0){
-                //     SoundManager.instance.PlaySound(sound);
+                if(i%soundDelay == 0){
+                    SoundHub.PlaySound(SoundHub.Sound.PlayerTalking, 0.05f);
 
-                // }
+                }
                 yield return new WaitForSeconds(delayBetweenText);
             }
 

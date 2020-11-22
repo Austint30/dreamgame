@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public static class SoundHub
 {
@@ -18,12 +19,36 @@ public static class SoundHub
         EnterSound,
     }
 
-    public static void PlaySound(Sound sound){
-        GameObject soundGameObject = new GameObject("Sound");
-        AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
-        audioSource.volume = 0.5f;
-        AudioClip audioClip = GetAudioClip(sound);
-        audioSource.PlayOneShot(audioClip);
+    private static GameObject oneShotGameObject;
+    private static AudioSource oneShotAudioSource;
+
+    public static void PlaySound(Sound sound, float volume = 0.5f){
+        if(CanPlaySound(sound)){
+            if(oneShotGameObject == null){
+                oneShotGameObject = new GameObject("Sound");
+                oneShotAudioSource = oneShotGameObject.AddComponent<AudioSource>();
+            }
+            oneShotAudioSource.volume = volume;
+            AudioClip audioClip = GetAudioClip(sound);
+            oneShotAudioSource.PlayOneShot(audioClip);
+        }
+        
+    }
+
+    private static bool CanPlaySound(Sound sound){
+        switch(sound){
+            default:
+                return true;
+            case Sound.PlayerMove:
+                float lastTimePlayed = 0f;
+                float playerMoveTimerMax = 0.05f;
+                if(lastTimePlayed + playerMoveTimerMax < Time.time){
+                    lastTimePlayed = Time.time;
+                    return true;
+                } else {
+                    return false;
+                }
+        }
     }
 
     public static AudioClip GetAudioClip(Sound sound){
