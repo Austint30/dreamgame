@@ -39,6 +39,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Aleenas Workspace/Green_room_testing.unity
     guid: 2ee3491a4e245644882bac7f79d8470d
   - enabled: 1
-    path: Assets/Scenes/Aleenas Workspace/DenialMap.unity
-    guid: 348ea5eccae4e4d40a443e049e58fff8
+    path: Assets/Scenes/Austin's Workspaces/DenialMap.unity
+    guid: 701b41d9bdbd94e4982def35dff12522
   m_configObjects: {}

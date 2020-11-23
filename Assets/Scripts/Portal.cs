@@ -20,13 +20,15 @@ public class Portal : MonoBehaviour
 
     public void Trigger(GameObject passingObject){
         passingObject.transform.parent = null;
-        Object.DontDestroyOnLoad(passingObject);
+        DontDestroyOnLoad(passingObject);
+        DontDestroyOnLoad(this.gameObject);
         //TODO: Implement transistion effect. Scene transition should happen after transition finishes.
         StartCoroutine("LoadLevel", passingObject);
         
     }
 
     private IEnumerator LoadLevel(GameObject passingObject){
+        int objId = passingObject.GetInstanceID();
         _levelLoadAsync = SceneManager.LoadSceneAsync(destinationSceneNum, LoadSceneMode.Single);
         while (!_levelLoadAsync.isDone){
             Debug.Log("Loading scene \"" + destinationSceneNum + "\"");
@@ -35,6 +37,8 @@ public class Portal : MonoBehaviour
         // Level has loaded
         Debug.Log("Level has finished loading!");
 
+
+        // Find the portal and move the player to it
         GameObject[] portals = GameObject.FindGameObjectsWithTag("Portal");
         bool found = false;
         foreach (GameObject portal in portals)
@@ -49,5 +53,16 @@ public class Portal : MonoBehaviour
         if (!found){
             Debug.LogWarning("Portal destination \"" + destinationPortalLabel + "\" doesn't exist!");
         }
+
+        // If a player clone is found in the scene KILL IT WITH FIRE!!! This game isn't big enough for the two of us!
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject player in players)
+        {
+            if (player.GetInstanceID() != objId){
+                Destroy(player);
+            }
+        }
+
+        Destroy(this.gameObject);
     }
 }
