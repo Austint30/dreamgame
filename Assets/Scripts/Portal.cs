@@ -15,19 +15,32 @@ public class Portal : MonoBehaviour
     public string destinationPortalLabel;
     public GameObject transitionEnterObject;
     public GameObject transitionExitObject;
+    [Tooltip("Custom spawn point of where the object coming through the portal will exit. Defaults to parent GameObject transform")]
+    public Transform spawnPoint = null;
 
     private AsyncOperation _levelLoadAsync;
+    [System.NonSerialized]
+    public Vector3 spawnPosition;
+    protected Portal otherPortal = null;
 
-    public void Trigger(GameObject passingObject){
+    void Start(){
+        spawnPosition = spawnPoint != null ? spawnPoint.TransformPoint(spawnPoint.position) : transform.position;
+    }
+
+    public virtual void Trigger(GameObject passingObject){
         passingObject.transform.parent = null;
         DontDestroyOnLoad(passingObject);
         DontDestroyOnLoad(this.gameObject);
         //TODO: Implement transistion effect. Scene transition should happen after transition finishes.
-        StartCoroutine("LoadLevel", passingObject);
+        StartCoroutine(LoadLevel(passingObject, OnLevelLoaded));
         
     }
 
-    private IEnumerator LoadLevel(GameObject passingObject){
+    protected virtual void OnLevelLoaded(GameObject passingObject, Portal otherPortal){
+        
+    }
+
+    private IEnumerator LoadLevel(GameObject passingObject, System.Action<GameObject, Portal> onFinished){
         int objId = passingObject.GetInstanceID();
         _levelLoadAsync = SceneManager.LoadSceneAsync(destinationSceneNum, LoadSceneMode.Single);
         while (!_levelLoadAsync.isDone){
@@ -41,13 +54,16 @@ public class Portal : MonoBehaviour
         // Find the portal and move the player to it
         GameObject[] portals = GameObject.FindGameObjectsWithTag("Portal");
         bool found = false;
+        Portal porScript = null;
         foreach (GameObject portal in portals)
         {
-            Portal porScript = portal.GetComponent<Portal>();
+            porScript = portal.GetComponent<Portal>();
             if (porScript && porScript.uniqueLabel == destinationPortalLabel){
                 Debug.Log("Portal \"" + destinationPortalLabel + "\" found! Moving object to portal position...");
-                passingObject.transform.position = portal.transform.position;
+                passingObject.transform.position = porScript.spawnPosition;
+                otherPortal = porScript;
                 found = true;
+                break;
             }
         }
         if (!found){
@@ -64,5 +80,6 @@ public class Portal : MonoBehaviour
         }
 
         Destroy(this.gameObject);
+        onFinished(passingObject, porScript);
     }
 }
