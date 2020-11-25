@@ -41,7 +41,7 @@ public static class SoundHub
                 return true;
             case Sound.PlayerMove:
                 float lastTimePlayed = 0f;
-                float playerMoveTimerMax = 0.05f;
+                float playerMoveTimerMax = 0.2f;
                 if(lastTimePlayed + playerMoveTimerMax < Time.time){
                     lastTimePlayed = Time.time;
                     return true;
