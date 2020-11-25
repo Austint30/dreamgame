@@ -160,6 +160,7 @@ public class Player : MonoBehaviour
         hasJumped = true;
         if (isGrounded){
             _rb.velocity = new Vector2(_lastObjectVelocity.x, _lastObjectVelocity.y + HeightToVelocity(groundJumpHeight));
+            SoundHub.PlaySound(SoundHub.Sound.PlayerJump, 0.07f);
         }
         // Air jumping cancels existing horizontal velocity in opposite direction
         //
