@@ -8,6 +8,7 @@ TagManager:
   - Platform
   - Powerup
   - DialogueTrigger
+  - Portal
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - LevelBounds
   - 
   - 
   - 

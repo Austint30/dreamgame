@@ -20,7 +20,7 @@ public class SceneTrigger : MonoBehaviour
     {
         if(callOnStay){
             if(Input.GetKeyDown(KeyCode.B)){
-                Debug.Log("Trigger");
+                // Debug.Log("Trigger");
                 SceneManager.LoadScene(sceneNumber);
                 callOnStay = false;
             }

@@ -74,10 +74,16 @@ public class Player : MonoBehaviour
         if (!disableInput)
             HandleJumping();
         _horizontalInput = Input.GetAxis("Horizontal");
+        if (!disableInput)
+            HandleMoving();
 
         //handle quit game at any point in the game, so as to not get stuck
         if(Input.GetKeyDown(KeyCode.Q)){
             Application.Quit();
+        }
+        // Terminal Velocity
+        if (_rb.velocity.y <= -terminalVelocity){
+            _rb.velocity = new Vector3(_rb.velocity.x, -terminalVelocity, 0);
         }
     }
 
@@ -102,9 +108,6 @@ public class Player : MonoBehaviour
                 _lastObjectVelocity = Vector2.zero;
             }
         }
-        if (!disableInput)
-            HandleMoving();
-        // TODO: Add terminal velocity
     }
 
     void HandleMoving(){

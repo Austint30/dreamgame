@@ -22,7 +22,7 @@ public static class SoundHub
     private static GameObject oneShotGameObject;
     private static AudioSource oneShotAudioSource;
 
-    public static void PlaySound(Sound sound, float volume = 0.5f){
+    public static void PlaySound(Sound sound, float volume = 1f){
         if(CanPlaySound(sound)){
             if(oneShotGameObject == null){
                 oneShotGameObject = new GameObject("Sound");

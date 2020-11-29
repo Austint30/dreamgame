@@ -39,7 +39,7 @@ public class DialogueTrigger : MonoBehaviour
     void OnTriggerStay2D(Collider2D _col)
     {
         if (_col.gameObject.CompareTag ("DialogueTrigger") && !isOnEnter) {
-                Debug.Log("Trigger");
+                // Debug.Log("Trigger");
             callOnStay = true;
         }
     }
