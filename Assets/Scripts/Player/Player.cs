@@ -96,6 +96,7 @@ public class Player : MonoBehaviour
             Time.timeScale = 1;
             PauseMenu.SetActive(false);
             pauseToggled = false;
+        }
         // Terminal Velocity
         if (_rb.velocity.y <= -terminalVelocity){
             _rb.velocity = new Vector3(_rb.velocity.x, -terminalVelocity, 0);
