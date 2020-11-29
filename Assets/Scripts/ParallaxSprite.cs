@@ -14,7 +14,7 @@ public class ParallaxSprite : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         transform.position = (Camera.main.transform.position + initOffset) * parallaxSpeed;
     }

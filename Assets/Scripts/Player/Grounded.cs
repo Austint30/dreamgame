@@ -21,6 +21,7 @@ public class Grounded : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
+        if (collider.isTrigger) return;
         playerScript.groundObj = collider.gameObject;
         if (collider.tag == "Ground")
         {
@@ -36,6 +37,7 @@ public class Grounded : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collider)
     {
+        if (collider.isTrigger) return;
         playerScript.groundObj = collider.gameObject;
         if (collider.tag == "Ground")
         {
