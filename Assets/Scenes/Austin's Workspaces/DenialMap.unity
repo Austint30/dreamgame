@@ -33009,6 +33009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activeOnStart: 1
+  player: {fileID: 0}
 --- !u!114 &1092461334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33224,6 +33225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activeOnStart: 0
+  player: {fileID: 0}
 --- !u!114 &1161374573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33991,11 +33993,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2917514576296812070, guid: 0b24d867a95ada049a3d72604ef24f00, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 65.3
+      value: -16.2
       objectReference: {fileID: 0}
     - target: {fileID: 2917514576296812070, guid: 0b24d867a95ada049a3d72604ef24f00, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -31.4
+      value: -4.62
       objectReference: {fileID: 0}
     - target: {fileID: 2917514576296812070, guid: 0b24d867a95ada049a3d72604ef24f00, type: 3}
       propertyPath: m_LocalPosition.z
