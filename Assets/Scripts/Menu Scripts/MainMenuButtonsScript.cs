@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
+using UnityEngine.Audio;
 
 public class MainMenuButtonsScript : MonoBehaviour
 {
+    private float sfxVol = 0.07f;
 
     public void PlayGame () {
         PlayMenuSound();
@@ -21,6 +23,18 @@ public class MainMenuButtonsScript : MonoBehaviour
     }
 
     public void PlayMenuSound(){
-        SoundHub.PlaySound(SoundHub.Sound.MenuButtonSound);
+        SoundHub.PlaySound(SoundHub.Sound.MenuButtonSound, sfxVol);
+    }
+
+    public void SetMainVolume(float volume){
+        AudioSource bgMusic = GameObject.Find("BackgroundMusic").GetComponent<AudioSource>();
+        bgMusic.volume = volume;
+        SoundHub.musicVolume = volume;
+    }
+
+    public void SetSFXVolume(float volume){
+        sfxVol = volume;
+        SoundHub.sfxVolume = volume;
+        PlayMenuSound();
     }
 }

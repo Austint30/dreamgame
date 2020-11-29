@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public static class SoundHub
 {
@@ -19,16 +20,41 @@ public static class SoundHub
         EnterSound,
     }
 
+    private static List<Sound> sfxSounds = new List<Sound>(){
+        Sound.PlayerMove,
+        Sound.PlayerJump,
+        Sound.PowerupSound,
+        Sound.PlayerTalking,
+        Sound.MenuButtonSound,
+        Sound.EnterSound
+    };
+
+    private static List<Sound> musicSounds = new List<Sound>(){
+        Sound.DenialBackgroundMusic,
+        Sound.GeneralHappyBackgroundMusic,
+        Sound.AngerBackgroundMusic,
+        Sound.IntenseBackgroundMusic,
+    };
+
     private static GameObject oneShotGameObject;
     private static AudioSource oneShotAudioSource;
+    public static float musicVolume = 0.07f;
+    public static float sfxVolume = 0.07f;
 
-    public static void PlaySound(Sound sound, float volume = 0.5f){
+    public static void PlaySound(Sound sound, float volume = 0.07f){
         if(CanPlaySound(sound)){
             if(oneShotGameObject == null){
                 oneShotGameObject = new GameObject("Sound");
                 oneShotAudioSource = oneShotGameObject.AddComponent<AudioSource>();
             }
-            oneShotAudioSource.volume = volume;
+
+            if(musicSounds.Contains(sound)){
+                oneShotAudioSource.volume = musicVolume;
+            }
+            else if(sfxSounds.Contains(sound)){
+                oneShotAudioSource.volume = sfxVolume;
+            }
+
             AudioClip audioClip = GetAudioClip(sound);
             oneShotAudioSource.PlayOneShot(audioClip);
         }
