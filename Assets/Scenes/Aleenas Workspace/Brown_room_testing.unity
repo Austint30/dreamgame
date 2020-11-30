@@ -731,6 +731,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 4010820164782678287, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 466691015}
+    - target: {fileID: 4010820164782678287, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
+      propertyPath: m_PlaneDistance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010820164782678287, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010820164782678287, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
+      propertyPath: m_PixelPerfect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010820165611930708, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -114.100006
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010820165611930708, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 79.100006
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
 --- !u!224 &499170705 stripped
