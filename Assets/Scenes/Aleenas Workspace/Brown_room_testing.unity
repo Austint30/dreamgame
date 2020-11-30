@@ -401,7 +401,7 @@ MonoBehaviour:
   input: I should probably go to bed.... press enter
   textColor: {r: 1, g: 1, b: 1, a: 0}
   textFont: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
-  delayBetweenText: 0.1
+  delayBetweenText: 0.01
   delayBetweenLines: 2
   changeOnDelay: 0
   sound: {fileID: 8300000, guid: 7f8d25f717f38174cb74a0ff4b2d5ec3, type: 3}
@@ -504,7 +504,7 @@ MonoBehaviour:
   input: It's getting late.... press enter
   textColor: {r: 1, g: 1, b: 1, a: 0}
   textFont: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
-  delayBetweenText: 0.1
+  delayBetweenText: 0.01
   delayBetweenLines: 2
   changeOnDelay: 0
   sound: {fileID: 8300000, guid: 7f8d25f717f38174cb74a0ff4b2d5ec3, type: 3}
@@ -636,6 +636,108 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &499170704
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 873408015}
+    m_Modifications:
+    - target: {fileID: 4010820164782678282, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010820164782678282, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010820164782678282, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010820164782678282, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010820164782678282, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010820164782678282, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010820164782678282, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010820164782678282, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010820164782678282, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010820164782678282, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010820164782678282, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010820164782678282, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010820164782678282, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010820164782678282, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010820164782678282, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010820164782678282, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010820164782678282, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010820164782678282, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010820164782678282, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010820164782678282, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010820164782678282, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010820164782678283, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
+      propertyPath: m_Name
+      value: PauseMenu
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
+--- !u!224 &499170705 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4010820164782678282, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
+  m_PrefabInstance: {fileID: 499170704}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &700544750
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,7 +1257,7 @@ MonoBehaviour:
   input: I should probably go to bed.... press enter
   textColor: {r: 1, g: 1, b: 1, a: 0}
   textFont: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
-  delayBetweenText: 0.1
+  delayBetweenText: 0.01
   delayBetweenLines: 2
   changeOnDelay: 0
   sound: {fileID: 8300000, guid: 7f8d25f717f38174cb74a0ff4b2d5ec3, type: 3}
@@ -1204,6 +1306,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 823308439}
   m_CullTransparentMesh: 0
+--- !u!1 &873408014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 873408015}
+  m_Layer: 0
+  m_Name: PauseMenu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &873408015
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873408014}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 678.6224, y: 569.54205, z: -356.17276}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 499170705}
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &909663437
 GameObject:
   m_ObjectHideFlags: 0
@@ -1215,7 +1348,7 @@ GameObject:
   - component: {fileID: 909663439}
   - component: {fileID: 909663438}
   m_Layer: 0
-  m_Name: bgMusic
+  m_Name: BackgroundMusic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1416,7 +1549,7 @@ RectTransform:
   m_GameObject: {fileID: 1092461332}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children:
   - {fileID: 254415404}
   - {fileID: 181364828}
@@ -1425,7 +1558,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.7, y: -140.45}
+  m_AnchoredPosition: {x: -3, y: -413}
   m_SizeDelta: {x: 471.03375, y: 62.698364}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1156150127
@@ -1482,7 +1615,7 @@ MonoBehaviour:
   input: It's locked ...press enter
   textColor: {r: 1, g: 1, b: 1, a: 0}
   textFont: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
-  delayBetweenText: 0.1
+  delayBetweenText: 0.01
   delayBetweenLines: 2
   changeOnDelay: 0
   sound: {fileID: 8300000, guid: 7f8d25f717f38174cb74a0ff4b2d5ec3, type: 3}
@@ -1559,7 +1692,7 @@ RectTransform:
   m_GameObject: {fileID: 1161374570}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children:
   - {fileID: 1156150128}
   - {fileID: 823308440}
@@ -1568,7 +1701,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.7, y: -140.45}
+  m_AnchoredPosition: {x: -3.0000124, y: -413}
   m_SizeDelta: {x: 471.0338, y: 62.69836}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1161374572
@@ -1977,6 +2110,10 @@ PrefabInstance:
       propertyPath: gravityScale
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 2917514576296812071, guid: 0b24d867a95ada049a3d72604ef24f00, type: 3}
+      propertyPath: PauseMenu
+      value: 
+      objectReference: {fileID: 873408014}
     - target: {fileID: 2917514577086041440, guid: 0b24d867a95ada049a3d72604ef24f00, type: 3}
       propertyPath: m_IsTrigger
       value: 1

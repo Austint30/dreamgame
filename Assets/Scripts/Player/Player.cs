@@ -47,6 +47,10 @@ public class Player : MonoBehaviour
     [System.NonSerialized]
     public GameObject groundObj;
 
+    [SerializeField]
+    private GameObject PauseMenu;
+    private bool pauseToggled = false;
+
     private float _horizontalInput;
     public bool isGrounded = false;
 
@@ -80,6 +84,18 @@ public class Player : MonoBehaviour
         //handle quit game at any point in the game, so as to not get stuck
         if(Input.GetKeyDown(KeyCode.Q)){
             Application.Quit();
+        }
+        else if(Input.GetKeyDown(KeyCode.Escape) && !pauseToggled){
+            Time.timeScale = 0;
+            PauseMenu.SetActive(true);
+            pauseToggled = true;
+            Debug.Log("PauseToggled");
+        }
+        else if(Input.GetKeyDown(KeyCode.Escape) && pauseToggled){
+            Debug.Log("PauseUnToggled");
+            Time.timeScale = 1;
+            PauseMenu.SetActive(false);
+            pauseToggled = false;
         }
         // Terminal Velocity
         if (_rb.velocity.y <= -terminalVelocity){
@@ -160,7 +176,7 @@ public class Player : MonoBehaviour
         hasJumped = true;
         if (isGrounded){
             _rb.velocity = new Vector2(_lastObjectVelocity.x, _lastObjectVelocity.y + HeightToVelocity(groundJumpHeight));
-            SoundHub.PlaySound(SoundHub.Sound.PlayerJump, 0.07f);
+            SoundHub.PlaySound(SoundHub.Sound.PlayerJump);
         }
         // Air jumping cancels existing horizontal velocity in opposite direction
         //
