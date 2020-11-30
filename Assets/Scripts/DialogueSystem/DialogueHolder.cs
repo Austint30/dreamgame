@@ -10,9 +10,7 @@ using UnityEngine.UI;
 
         [Header ("Active Settings")]
         [SerializeField] public bool activeOnStart;
-        [Tooltip ("If active on start, then character tag not necessary")]
-        [SerializeField] public string characterTag;   
-        public bool isActive; 
+        [SerializeField] public Player player;
 
         private void Awake()
         {
@@ -23,30 +21,16 @@ using UnityEngine.UI;
             }
         }
 
-        public void Update(){
-            if(isActive && !activeOnStart){
-                gameObject.SetActive(true);
-                StartCoroutine(dialogueSequence());
-            }
-        }
-
-        // void OnTriggerStay(Collider other){
-            
-        //     //Can change keycode to whatever
-        //     if(other.tag == characterTag && Input.GetKeyDown(KeyCode.A)){
-        //         gameObject.SetActive(true);
-        //         StartCoroutine(dialogueSequence());
-        //     }
-        // }
-
         public IEnumerator dialogueSequence()
         {
+            player.disableInput = true;
             for(int i = 0; i < transform.childCount; i++){
                 Deactivate();
                 transform.GetChild(i).gameObject.SetActive(true);
                 yield return new WaitUntil(() => transform.GetChild(i).GetComponent<DialogueLine>().finished);
             }
             gameObject.SetActive(false);
+            player.disableInput = false;
         }
 
         private void Deactivate(){
