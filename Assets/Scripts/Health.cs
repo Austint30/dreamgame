@@ -15,10 +15,7 @@ public class Health : MonoBehaviour
     void Update()
     {
         if(callOnStay){
-            if(Input.GetKeyDown(KeyCode.Return) && isDamage){
-                playerDamage();
-            }
-            else if(Input.GetKeyDown(KeyCode.Return) && !isDamage){
+            if(Input.GetKeyDown(KeyCode.Return) && !isDamage){
                 playerHeal();
             }
             else if(comingFromKillZone){
@@ -27,9 +24,34 @@ public class Health : MonoBehaviour
         }
     }
 
+    private bool CanDamage(){
+        float lastTimePlayed = 0f;
+        float playerMoveTimerMax = 0.2f;
+        if(lastTimePlayed + playerMoveTimerMax < Time.time){
+            lastTimePlayed = Time.time;
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    void OnCollisionEnter(Collision _col)
+    {
+        if(_col.gameObject.CompareTag("DialogueTrigger") && isDamage && CanDamage()){
+            playerDamage();
+        }
+    }
+
     void OnTriggerStay2D(Collider2D _col)
     {
         if (_col.gameObject.CompareTag ("DialogueTrigger")) {
+            callOnStay = true;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D _col)
+    {
+        if (_col.gameObject.CompareTag ("DialogueTrigger") && comingFromKillZone) {
             callOnStay = true;
         }
     }
@@ -68,13 +90,13 @@ public class Health : MonoBehaviour
         SceneManager.LoadScene(5);
     }
 
-    void OnTriggerExit2D(Collider2D _col)
-    {
-        if (_col.gameObject.CompareTag ("DialogueTrigger")) {
-                // Debug.Log("Trigger");
-            callOnStay = false;
-        }
-    }
+    // void OnTriggerExit2D(Collider2D _col)
+    // {
+    //     if (_col.gameObject.CompareTag ("DialogueTrigger")) {
+    //             // Debug.Log("Trigger");
+    //         callOnStay = false;
+    //     }
+    // }
 
 
 }

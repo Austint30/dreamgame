@@ -48479,30 +48479,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1 &944764552 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6836964066951149850, guid: d82bbd1643f5e2f438a8fa3110304cf4, type: 3}
-  m_PrefabInstance: {fileID: 6836964067089076114}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &944764554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 944764552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 833af18f0248aee4fb294d9857f63c08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBars:
-  - {fileID: 955805777}
-  - {fileID: 955805776}
-  - {fileID: 955805775}
-  player: {fileID: 1743749071}
-  isDamage: 1
-  comingFromKillZone: 0
 --- !u!1001 &955805773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49996,6 +49972,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2049630083}
   m_CullTransparentMesh: 0
+--- !u!1 &2091678934 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6836964066496328598, guid: d82bbd1643f5e2f438a8fa3110304cf4, type: 3}
+  m_PrefabInstance: {fileID: 6836964067089076114}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2091678935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091678934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 833af18f0248aee4fb294d9857f63c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBars:
+  - {fileID: 955805777}
+  - {fileID: 955805776}
+  - {fileID: 955805775}
+  player: {fileID: 1743749071}
+  isDamage: 1
+  comingFromKillZone: 0
 --- !u!1 &2104068684
 GameObject:
   m_ObjectHideFlags: 0
@@ -50095,8 +50095,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6836964066951149848, guid: d82bbd1643f5e2f438a8fa3110304cf4, type: 3}
-      propertyPath: m_Enabled
+    - target: {fileID: 6836964066951149849, guid: d82bbd1643f5e2f438a8fa3110304cf4, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6836964066951149849, guid: d82bbd1643f5e2f438a8fa3110304cf4, type: 3}
+      propertyPath: m_AutoTiling
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
