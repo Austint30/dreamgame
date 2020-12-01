@@ -18,6 +18,7 @@ public class Health : MonoBehaviour
         if(callOnStay){
             if(Input.GetKeyDown(KeyCode.Return) && !isDamage){
                 playerHeal();
+                callOnStay = false;
             }
             else if(comingFromKillZone){
                 toggleGameOver();
