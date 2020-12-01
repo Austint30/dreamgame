@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Denial.unity
     guid: e056bbbd50e00a049805f9c216fbf6c0
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 6d40f5973939edb4187a71102ade569c
   m_configObjects: {}
