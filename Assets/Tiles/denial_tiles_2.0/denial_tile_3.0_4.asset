@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: denial_tile_3
+  m_Name: denial_tile_3.0_4
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: -6552026931540161529, guid: b45aa90bb78e8421d8517c849280d666, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

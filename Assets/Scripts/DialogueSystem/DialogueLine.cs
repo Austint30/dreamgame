@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace DialogueSystem
-{
+// namespace DialogueSystem
+// {
     public class DialogueLine : DialogueBaseClass
     {
 
@@ -44,6 +44,6 @@ namespace DialogueSystem
 
         } 
     }
-}
+//}
 
 

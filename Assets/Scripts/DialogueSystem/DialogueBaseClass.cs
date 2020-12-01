@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-namespace DialogueSystem
-{
+// namespace DialogueSystem
+// {
     public class DialogueBaseClass : MonoBehaviour
     {
         public bool finished {get; private set;}
@@ -18,10 +18,10 @@ namespace DialogueSystem
 
             for(int i = 0; i < input.Length; i++){
                 textHolder.text += input[i];
-                if(i%soundDelay == 0){
-                    SoundManager.instance.PlaySound(sound);
+                // if(i%soundDelay == 0){
+                //     SoundManager.instance.PlaySound(sound);
 
-                }
+                // }
                 yield return new WaitForSeconds(delayBetweenText);
             }
 
@@ -29,12 +29,12 @@ namespace DialogueSystem
                 yield return new WaitForSeconds(delayBetweenLines);
             }
             else{
-                yield return new WaitUntil(() => Input.GetMouseButton(0));
+                yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Return));
             }
             
             finished = true;
         }
     }
 
-}
+// }
 
