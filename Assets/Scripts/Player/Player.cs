@@ -195,7 +195,7 @@ public class Player : MonoBehaviour
 
     void HandleJumping()
     {
-
+        
         // Disable jump when dismounting from ladder
         if (Input.GetAxisRaw("Vertical") < -0.2f && _climbing){
             return;
@@ -207,7 +207,9 @@ public class Player : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             _isJumping = true;
+            EnablePhysics();
             Jump();
+            _climbing = false;
         }
         else if (isGrounded && !_isJumping){
             _currJumps = 0;
@@ -226,7 +228,9 @@ public class Player : MonoBehaviour
     }
 
     void Jump(){
-        _currJumps++;
+        if (!_climbing){
+            _currJumps++;
+        }
         hasJumped = true;
         if (isGrounded){
             _rb.velocity = new Vector2(_lastObjectVelocity.x, _lastObjectVelocity.y + HeightToVelocity(groundJumpHeight));
