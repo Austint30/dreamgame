@@ -2,32 +2,53 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//namespace DialogueSystem{
 public class DialogueTrigger : MonoBehaviour
 {
+    public GameObject trigger;
+    [SerializeField] public bool isOnEnter;
+    private bool callOnStay;
 
-    [SerializeField]private DialogueHolder dH;
-    public static bool disabled = true;
+    // Start is called before the first frame update
+    void Start()
+    {
+        trigger.SetActive (false);
+        callOnStay = false;
+    }
 
-    void OnTriggerEnter2D(Collider2D other)
-     {
-         if (Input.GetKeyDown(KeyCode.Return)) 
-         {
-             dH.isActive = true;
-         }
-         else{
-             dH.isActive = false;
-         }
-  
-     }
+    // Update is called once per frame
+    void Update()
+    {
+        if(callOnStay){
+            if(Input.GetKeyDown(KeyCode.Return)){
+                trigger.SetActive (true);
+                var dialogueVar = trigger.GetComponent<DialogueHolder>();
+                StartCoroutine(dialogueVar.dialogueSequence());
+                callOnStay = false;
+            }
+        }
+    }
 
-     void Update () {
-         if (disabled){
-             dH.isActive = false;
-         }
-         else{
-             dH.isActive = true;
-         }
-     }
+    private void OnTriggerEnter2D(Collider2D _col){
+        if (_col.gameObject.CompareTag ("DialogueTrigger") && isOnEnter) {
+            trigger.SetActive (true);
+            var dialogueVar = trigger.GetComponent<DialogueHolder>();
+            StartCoroutine(dialogueVar.dialogueSequence());
+        }
+    }
+
+    void OnTriggerStay2D(Collider2D _col)
+    {
+        if (_col.gameObject.CompareTag ("DialogueTrigger") && !isOnEnter) {
+                // Debug.Log("Trigger");
+            callOnStay = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D _col)
+    {
+        if (_col.gameObject.CompareTag ("DialogueTrigger")) {
+                // Debug.Log("Trigger");
+            callOnStay = false;
+        }
+    }
 }
-//}

@@ -32,7 +32,7 @@ public class PlayerBoyAnimControl : MonoBehaviour
                 walkSpeed = 0;
             }
             else{
-                SoundHub.PlaySound(SoundHub.Sound.PlayerMove, 0.07f);
+                SoundHub.PlaySound(SoundHub.Sound.PlayerMove);
             }
             playerAnimator.SetFloat("WalkSpeed", walkSpeed);
         }

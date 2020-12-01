@@ -5,34 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/TitleMenu.unity
     guid: 450517be24166ef4f9f6571d3a00c1ca
   - enabled: 1
-    path: Assets/Scenes/Brown_room.unity
-    guid: 55bdcdc296bef40dcbf34b8d5255fc63
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+    path: Assets/Scenes/IntroductionScene.unity
+    guid: ba6479eb7cb597343b1ebbd83af924c9
+  - enabled: 1
+    path: Assets/Scenes/Aleenas Workspace/Brown_room_testing.unity
+    guid: 1957d1ada5d0fd04caeac1d4c5f65ef8
+  - enabled: 1
+    path: Assets/Scenes/Aleenas Workspace/Green_room_testing.unity
+    guid: 2ee3491a4e245644882bac7f79d8470d
   - enabled: 1
     path: Assets/Scenes/Denial.unity
-    guid: 1487fc2e26aa95d41a9ae73dbbf68227
+    guid: e056bbbd50e00a049805f9c216fbf6c0
   - enabled: 1
-    path: Assets/Scenes/Anger.unity
-    guid: bb6fbe023692a124b8540282b1f5be81
-  - enabled: 1
-    path: Assets/Scenes/Bargaining.unity
-    guid: 7a4f4f716cb0fdb45951cd6b883686e6
-  - enabled: 1
-    path: Assets/Scenes/Depression.unity
-    guid: 0980cfac8e9530b4dab73ec9f6c7a68f
-  - enabled: 1
-    path: Assets/Scenes/Acceptance.unity
-    guid: 7c99c0d3f86410f4297b4a44abc816f3
-  - enabled: 1
-    path: Assets/Scenes/Ending.unity
-    guid: c030dff16c260bd4ba2232f32d77aa86
+    path: Assets/Scenes/GameOver.unity
+    guid: 6d40f5973939edb4187a71102ade569c
   m_configObjects: {}

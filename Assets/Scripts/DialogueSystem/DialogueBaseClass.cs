@@ -19,7 +19,7 @@ using UnityEngine.UI;
             for(int i = 0; i < input.Length; i++){
                 textHolder.text += input[i];
                 if(i%soundDelay == 0){
-                    SoundHub.PlaySound(SoundHub.Sound.PlayerTalking, 0.05f);
+                    SoundHub.PlaySound(SoundHub.Sound.PlayerTalking);
 
                 }
                 yield return new WaitForSeconds(delayBetweenText);
@@ -29,7 +29,7 @@ using UnityEngine.UI;
                 yield return new WaitForSeconds(delayBetweenLines);
             }
             else{
-                yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Return));
+                yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z));
             }
             
             finished = true;
