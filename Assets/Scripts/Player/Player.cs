@@ -36,7 +36,13 @@ public class Player : MonoBehaviour
         }
         set {
             _climbing = value;
-            disablePhysics = value;
+            if (value){
+                DisablePhysics();
+            }
+            else
+            {
+                EnablePhysics();
+            }
         }
     }
 
@@ -56,8 +62,6 @@ public class Player : MonoBehaviour
     public bool disableInput = false;
     [System.NonSerialized]
     public GameObject groundObj;
-    [System.NonSerialized]
-    public bool disablePhysics = false;
 
     [SerializeField]
     private GameObject PauseMenu;
@@ -79,12 +83,15 @@ public class Player : MonoBehaviour
     private bool hittingWall = false;
     private int wallHitDir = 0;
     private bool _climbing = false;
+    private float temp_horizontalInput;
+    private RigidbodyConstraints2D originalConstraints;
 
     // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         _rb.gravityScale = gravityScale;
+        originalConstraints = _rb.constraints;
         gameObject.tag = "Player";
     }
 
@@ -154,21 +161,24 @@ public class Player : MonoBehaviour
                 _lastObjectVelocity = Vector2.zero;
             }
         }
-        if (disablePhysics){
-            _rb.velocity = Vector3.zero;
-        }
     }
 
     void HandleMoving(){
 
         // Stop translating character if wall is in the way. Prevents the character from "sinking" into the wall slightly when
         // walking into wall.
-        if (GetMoveDir() == wallHitDir && hittingWall) return;
+        if (GetMoveDir() == wallHitDir && hittingWall){
+            temp_horizontalInput = 0f;
+        }
+        else
+        {
+            temp_horizontalInput = _horizontalInput;
+        }
 
-        Vector3 translation = new Vector3(_horizontalInput, 0, 0) * speed * Time.deltaTime;
+        Vector3 translation = new Vector3(temp_horizontalInput, 0, 0) * speed * Time.deltaTime;
 
         if (climbing){
-            translation = new Vector3(_horizontalInput, _verticalInput, 0) * climbSpeed * Time.deltaTime;
+            translation = new Vector3(temp_horizontalInput, _verticalInput, 0) * climbSpeed * Time.deltaTime;
         }
 
         // TODO: Implement more stable horizontal movement on angles surfaces
@@ -185,6 +195,12 @@ public class Player : MonoBehaviour
 
     void HandleJumping()
     {
+
+        // Disable jump when dismounting from ladder
+        if (Input.GetAxisRaw("Vertical") < -0.2f && _climbing){
+            return;
+        }
+
         if (Input.GetButtonUp("Jump")){
             _isJumping = false;
         }
@@ -197,6 +213,7 @@ public class Player : MonoBehaviour
             _currJumps = 0;
             hasJumped = false;
         }
+
         if (!isGrounded && !_isJumping){ // Allows player to control height of jump
             if (_rb.velocity.y > 0){
                 _rb.gravityScale = gravityScale * 4;
@@ -256,6 +273,14 @@ public class Player : MonoBehaviour
         else {
             return 0;
         }
+    }
+    
+    public void DisablePhysics(){
+        _rb.constraints = RigidbodyConstraints2D.FreezeAll;
+    }
+
+    public void EnablePhysics(){
+        _rb.constraints = originalConstraints;
     }
 
 }
