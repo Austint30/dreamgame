@@ -740,7 +740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd4dec7fbf2cb94887c86bfd0d5f34e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: but i am in dismay
+  input: but I am in dismay
   textColor: {r: 0, g: 0, b: 0, a: 0}
   textFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   delayBetweenText: 0.05
@@ -1580,7 +1580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd4dec7fbf2cb94887c86bfd0d5f34e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: 'it may be cliche '
+  input: "it may be clich\xE9 "
   textColor: {r: 0, g: 0, b: 0, a: 0}
   textFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   delayBetweenText: 0.05
