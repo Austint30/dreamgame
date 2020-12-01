@@ -92,6 +92,150 @@ TextureImporter:
   - first:
       213: -2263058744057422669
     second: rotten_wood_floor_2_19
+  - first:
+      213: -7864115242942186180
+    second: rotten_wood_floor_2_10
+  - first:
+      213: -4979782531103921952
+    second: rotten_wood_floor_2_11
+  - first:
+      213: 3628578732709979369
+    second: rotten_wood_floor_2_12
+  - first:
+      213: 6860816223052872171
+    second: rotten_wood_floor_2_13
+  - first:
+      213: -6862593366228667285
+    second: rotten_wood_floor_2_14
+  - first:
+      213: 230117339242582964
+    second: rotten_wood_floor_2_15
+  - first:
+      213: 8804463826625034632
+    second: rotten_wood_floor_2_16
+  - first:
+      213: -6254432444215945275
+    second: rotten_wood_floor_2_17
+  - first:
+      213: 296617630853201990
+    second: rotten_wood_floor_2_18
+  - first:
+      213: 3297960100775645889
+    second: rotten_wood_floor_2_19
+  - first:
+      213: 6508928203335892523
+    second: rotten_wood_floor_2_20
+  - first:
+      213: -4233166282189548843
+    second: rotten_wood_floor_2_21
+  - first:
+      213: -3008196170530225531
+    second: rotten_wood_floor_2_22
+  - first:
+      213: -6830377679600662769
+    second: rotten_wood_floor_2_23
+  - first:
+      213: -5554928110093153645
+    second: rotten_wood_floor_2_24
+  - first:
+      213: -5312043890296991053
+    second: rotten_wood_floor_2_25
+  - first:
+      213: -3694173965830065099
+    second: rotten_wood_floor_2_26
+  - first:
+      213: 12932823555745362
+    second: rotten_wood_floor_2_27
+  - first:
+      213: -7530346431289956808
+    second: rotten_wood_floor_2_28
+  - first:
+      213: -7394863419986474915
+    second: rotten_wood_floor_2_29
+  - first:
+      213: 2890361703096494150
+    second: rotten_wood_floor_2_30
+  - first:
+      213: -2633520985923784190
+    second: rotten_wood_floor_2_31
+  - first:
+      213: 403569089810690889
+    second: rotten_wood_floor_2_32
+  - first:
+      213: -583419690017322110
+    second: rotten_wood_floor_2_33
+  - first:
+      213: -6448299196759049967
+    second: rotten_wood_floor_2_34
+  - first:
+      213: -4867621338447486649
+    second: rotten_wood_floor_2_35
+  - first:
+      213: 345368121615657351
+    second: rotten_wood_floor_2_36
+  - first:
+      213: 6730451655432088015
+    second: rotten_wood_floor_2_20
+  - first:
+      213: -1518906016212137617
+    second: rotten_wood_floor_2_21
+  - first:
+      213: 2980785365094812716
+    second: rotten_wood_floor_2_22
+  - first:
+      213: 6099571749582984755
+    second: rotten_wood_floor_2_23
+  - first:
+      213: -8413658644863112902
+    second: rotten_wood_floor_2_24
+  - first:
+      213: -8499113644048151968
+    second: rotten_wood_floor_2_25
+  - first:
+      213: -3743211831531574604
+    second: rotten_wood_floor_2_26
+  - first:
+      213: -6272628201614455616
+    second: rotten_wood_floor_2_27
+  - first:
+      213: 7525901149158072920
+    second: rotten_wood_floor_2_28
+  - first:
+      213: 6014860174743127070
+    second: rotten_wood_floor_2_29
+  - first:
+      213: -2125106905642942473
+    second: rotten_wood_floor_2_30
+  - first:
+      213: -4557159710940456594
+    second: rotten_wood_floor_2_31
+  - first:
+      213: -1688922306350918661
+    second: rotten_wood_floor_2_32
+  - first:
+      213: -639147372110942421
+    second: rotten_wood_floor_2_33
+  - first:
+      213: -3763861352415385521
+    second: rotten_wood_floor_2_34
+  - first:
+      213: -2194118015212213538
+    second: rotten_wood_floor_2_35
+  - first:
+      213: -372387621095242540
+    second: rotten_wood_floor_2_37
+  - first:
+      213: 142390549249909605
+    second: rotten_wood_floor_2_38
+  - first:
+      213: 3306470320720836779
+    second: rotten_wood_floor_2_39
+  - first:
+      213: -6772197162998792857
+    second: rotten_wood_floor_2_40
+  - first:
+      213: 4310412791732642099
+    second: rotten_wood_floor_2_41
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -183,7 +327,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 960
+        y: 1440
         width: 240
         height: 240
       alignment: 0
@@ -204,7 +348,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 240
-        y: 960
+        y: 1440
         width: 240
         height: 240
       alignment: 0
@@ -225,7 +369,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 480
-        y: 960
+        y: 1440
         width: 240
         height: 240
       alignment: 0
@@ -246,7 +390,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 720
-        y: 960
+        y: 1440
         width: 240
         height: 240
       alignment: 0
@@ -266,8 +410,8 @@ TextureImporter:
       name: rotten_wood_floor_2_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 720
+        x: 960
+        y: 1440
         width: 240
         height: 240
       alignment: 0
@@ -287,8 +431,8 @@ TextureImporter:
       name: rotten_wood_floor_2_5
       rect:
         serializedVersion: 2
-        x: 240
-        y: 720
+        x: 1200
+        y: 1440
         width: 240
         height: 240
       alignment: 0
@@ -308,8 +452,8 @@ TextureImporter:
       name: rotten_wood_floor_2_6
       rect:
         serializedVersion: 2
-        x: 480
-        y: 720
+        x: 0
+        y: 1200
         width: 240
         height: 240
       alignment: 0
@@ -329,8 +473,8 @@ TextureImporter:
       name: rotten_wood_floor_2_7
       rect:
         serializedVersion: 2
-        x: 720
-        y: 720
+        x: 240
+        y: 1200
         width: 240
         height: 240
       alignment: 0
@@ -350,8 +494,8 @@ TextureImporter:
       name: rotten_wood_floor_2_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 480
+        x: 480
+        y: 1200
         width: 240
         height: 240
       alignment: 0
@@ -371,8 +515,8 @@ TextureImporter:
       name: rotten_wood_floor_2_9
       rect:
         serializedVersion: 2
-        x: 240
-        y: 480
+        x: 720
+        y: 1200
         width: 240
         height: 240
       alignment: 0
@@ -392,8 +536,8 @@ TextureImporter:
       name: rotten_wood_floor_2_10
       rect:
         serializedVersion: 2
-        x: 480
-        y: 480
+        x: 960
+        y: 1200
         width: 240
         height: 240
       alignment: 0
@@ -403,8 +547,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91a28a70f0b5d0b10800000000000000
-      internalID: 1949314333832391193
+      spriteID: c3d32b73adc0dd290800000000000000
+      internalID: -7864115242942186180
       vertices: []
       indices: 
       edges: []
@@ -413,8 +557,8 @@ TextureImporter:
       name: rotten_wood_floor_2_11
       rect:
         serializedVersion: 2
-        x: 720
-        y: 480
+        x: 1200
+        y: 1200
         width: 240
         height: 240
       alignment: 0
@@ -424,8 +568,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6dc5ba8238f12cc0800000000000000
-      internalID: -3737433319781577362
+      spriteID: 0e8ead60c2244eab0800000000000000
+      internalID: -4979782531103921952
       vertices: []
       indices: 
       edges: []
@@ -435,6 +579,384 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
+        y: 960
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e427b2e12d4b5230800000000000000
+      internalID: 3628578732709979369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotten_wood_floor_2_13
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 960
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be9bd443104863f50800000000000000
+      internalID: 6860816223052872171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotten_wood_floor_2_14
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 960
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b64fcf761bb23c0a0800000000000000
+      internalID: -6862593366228667285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotten_wood_floor_2_15
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 960
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b35636308a813300800000000000000
+      internalID: 230117339242582964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotten_wood_floor_2_16
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 960
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 889f2c7c33dbf2a70800000000000000
+      internalID: 8804463826625034632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotten_wood_floor_2_17
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 960
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c794d254dac339a0800000000000000
+      internalID: -6254432444215945275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotten_wood_floor_2_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6408f19e92ccd1400800000000000000
+      internalID: 296617630853201990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotten_wood_floor_2_19
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 720
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c2d4220d35b4cd20800000000000000
+      internalID: 3297960100775645889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotten_wood_floor_2_20
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 720
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc928f30f1e576d50800000000000000
+      internalID: 6730451655432088015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotten_wood_floor_2_21
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 720
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f69c8789603cbeae0800000000000000
+      internalID: -1518906016212137617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotten_wood_floor_2_22
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 720
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2cc8262f70ed5920800000000000000
+      internalID: 2980785365094812716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotten_wood_floor_2_23
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 720
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 336d6e7703806a450800000000000000
+      internalID: 6099571749582984755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotten_wood_floor_2_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a392a8b3a0eac3b80800000000000000
+      internalID: -8413658644863112902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotten_wood_floor_2_25
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 480
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06a85d4cb251d0a80800000000000000
+      internalID: -8499113644048151968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotten_wood_floor_2_26
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 480
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ba658eeba07d0cc0800000000000000
+      internalID: -3743211831531574604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotten_wood_floor_2_27
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 480
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cc4caa62e523f8a0800000000000000
+      internalID: -6272628201614455616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotten_wood_floor_2_28
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 480
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8526542a83f517860800000000000000
+      internalID: 7525901149158072920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotten_wood_floor_2_29
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 480
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e144539f573197350800000000000000
+      internalID: 6014860174743127070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotten_wood_floor_2_30
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 240
         width: 240
         height: 240
@@ -445,14 +967,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12f7cf53db55ce9d0800000000000000
-      internalID: -2743723801832554719
+      spriteID: 7ff3c63578a1282e0800000000000000
+      internalID: -2125106905642942473
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rotten_wood_floor_2_13
+      name: rotten_wood_floor_2_31
       rect:
         serializedVersion: 2
         x: 240
@@ -466,14 +988,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d35121cc707c7e8c0800000000000000
-      internalID: -3969985710201367235
+      spriteID: e691ca44367b1c0c0800000000000000
+      internalID: -4557159710940456594
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rotten_wood_floor_2_14
+      name: rotten_wood_floor_2_32
       rect:
         serializedVersion: 2
         x: 480
@@ -487,14 +1009,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af73b2899d5fcf5d0800000000000000
-      internalID: -3027274534590138374
+      spriteID: bf358b45c1ebf88e0800000000000000
+      internalID: -1688922306350918661
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rotten_wood_floor_2_15
+      name: rotten_wood_floor_2_33
       rect:
         serializedVersion: 2
         x: 720
@@ -508,14 +1030,56 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c47317e14182ff320800000000000000
-      internalID: 2593835977263888204
+      spriteID: b2fe336f9da4127f0800000000000000
+      internalID: -639147372110942421
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rotten_wood_floor_2_16
+      name: rotten_wood_floor_2_34
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 240
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f48a571ba0414cbc0800000000000000
+      internalID: -3763861352415385521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotten_wood_floor_2_35
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 240
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edaadf34a4dec81e0800000000000000
+      internalID: -2194118015212213538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotten_wood_floor_2_36
       rect:
         serializedVersion: 2
         x: 0
@@ -529,14 +1093,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 556bf3ad50fd0c900800000000000000
-      internalID: 702806758099236437
+      spriteID: 78925ad0a7efac400800000000000000
+      internalID: 345368121615657351
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rotten_wood_floor_2_17
+      name: rotten_wood_floor_2_37
       rect:
         serializedVersion: 2
         x: 240
@@ -550,14 +1114,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd5099862fff88650800000000000000
-      internalID: 6235515100696479196
+      spriteID: 4d48ddd7e6305daf0800000000000000
+      internalID: -372387621095242540
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rotten_wood_floor_2_18
+      name: rotten_wood_floor_2_38
       rect:
         serializedVersion: 2
         x: 480
@@ -571,14 +1135,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abddc22663bf5ca90800000000000000
-      internalID: -7294147810462736966
+      spriteID: 563e96b337fd9f100800000000000000
+      internalID: 142390549249909605
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rotten_wood_floor_2_19
+      name: rotten_wood_floor_2_39
       rect:
         serializedVersion: 2
         x: 720
@@ -592,8 +1156,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bc9d9eff000890e0800000000000000
-      internalID: -2263058744057422669
+      spriteID: ba8ffeefc31f2ed20800000000000000
+      internalID: 3306470320720836779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotten_wood_floor_2_40
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d7c869f825402a0800000000000000
+      internalID: -6772197162998792857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotten_wood_floor_2_41
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3312686b899a1db30800000000000000
+      internalID: 4310412791732642099
       vertices: []
       indices: 
       edges: []
