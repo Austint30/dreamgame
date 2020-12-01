@@ -19,7 +19,7 @@ public class DialogueTrigger : MonoBehaviour
     void Update()
     {
         if(callOnStay){
-            if(Input.GetKeyDown(KeyCode.B)){
+            if(Input.GetKeyDown(KeyCode.Return)){
                 trigger.SetActive (true);
                 var dialogueVar = trigger.GetComponent<DialogueHolder>();
                 StartCoroutine(dialogueVar.dialogueSequence());
@@ -41,6 +41,14 @@ public class DialogueTrigger : MonoBehaviour
         if (_col.gameObject.CompareTag ("DialogueTrigger") && !isOnEnter) {
                 // Debug.Log("Trigger");
             callOnStay = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D _col)
+    {
+        if (_col.gameObject.CompareTag ("DialogueTrigger")) {
+                // Debug.Log("Trigger");
+            callOnStay = false;
         }
     }
 }

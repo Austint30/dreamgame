@@ -29,7 +29,7 @@ using UnityEngine.UI;
                 yield return new WaitForSeconds(delayBetweenLines);
             }
             else{
-                yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Return));
+                yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z));
             }
             
             finished = true;

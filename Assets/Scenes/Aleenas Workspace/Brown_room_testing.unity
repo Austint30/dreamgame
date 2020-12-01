@@ -290,6 +290,7 @@ RectTransform:
   m_Children:
   - {fileID: 314883470}
   - {fileID: 1067843894}
+  - {fileID: 1027793900}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -565,7 +566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd4dec7fbf2cb94887c86bfd0d5f34e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: It's locked ...press enter
+  input: It's locked ...press 'Z'
   textColor: {r: 0, g: 0, b: 0, a: 0}
   textFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   delayBetweenText: 0.01
@@ -1417,7 +1418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd4dec7fbf2cb94887c86bfd0d5f34e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: I should probably go to bed.... press enter
+  input: I should probably go to bed.... press 'Z'
   textColor: {r: 0, g: 0, b: 0, a: 0}
   textFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   delayBetweenText: 0.01
@@ -1777,6 +1778,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 953733229}
   m_CullTransparentMesh: 0
+--- !u!224 &1027793900 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6054461616694031621, guid: add01c438a26d1e4e9db909f585700f6, type: 3}
+  m_PrefabInstance: {fileID: 6054461616069154537}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1044134837 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3817422046454096912, guid: 0b24d867a95ada049a3d72604ef24f00, type: 3}
@@ -1967,7 +1973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd4dec7fbf2cb94887c86bfd0d5f34e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: It's getting late.... press enter
+  input: It's getting late.... press 'Z'
   textColor: {r: 0, g: 0, b: 0, a: 0}
   textFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   delayBetweenText: 0.01
@@ -2188,6 +2194,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1200036801}
     m_Modifications:
+    - target: {fileID: 1132781585, guid: 0b24d867a95ada049a3d72604ef24f00, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2917514576296812065, guid: 0b24d867a95ada049a3d72604ef24f00, type: 3}
       propertyPath: m_Name
       value: Player_Boy_00
@@ -2260,6 +2270,10 @@ PrefabInstance:
       propertyPath: PauseMenu
       value: 
       objectReference: {fileID: 873408014}
+    - target: {fileID: 2917514576296812071, guid: 0b24d867a95ada049a3d72604ef24f00, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2917514577086041440, guid: 0b24d867a95ada049a3d72604ef24f00, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -2329,7 +2343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd4dec7fbf2cb94887c86bfd0d5f34e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: I should probably go to bed.... press enter
+  input: I should probably go to bed.... press 'Z'
   textColor: {r: 0, g: 0, b: 0, a: 0}
   textFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   delayBetweenText: 0.01
@@ -2482,7 +2496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbda52da9477e4c48bc05f32d249e310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNumber: 8
+  sceneNumber: 3
 --- !u!61 &2017950428
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2610,3 +2624,100 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &6054461616069154537
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 151195611}
+    m_Modifications:
+    - target: {fileID: 6054461616694031618, guid: add01c438a26d1e4e9db909f585700f6, type: 3}
+      propertyPath: m_Name
+      value: HealthBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054461616694031621, guid: add01c438a26d1e4e9db909f585700f6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054461616694031621, guid: add01c438a26d1e4e9db909f585700f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054461616694031621, guid: add01c438a26d1e4e9db909f585700f6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054461616694031621, guid: add01c438a26d1e4e9db909f585700f6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054461616694031621, guid: add01c438a26d1e4e9db909f585700f6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054461616694031621, guid: add01c438a26d1e4e9db909f585700f6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054461616694031621, guid: add01c438a26d1e4e9db909f585700f6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054461616694031621, guid: add01c438a26d1e4e9db909f585700f6, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054461616694031621, guid: add01c438a26d1e4e9db909f585700f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054461616694031621, guid: add01c438a26d1e4e9db909f585700f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054461616694031621, guid: add01c438a26d1e4e9db909f585700f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054461616694031621, guid: add01c438a26d1e4e9db909f585700f6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 696.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054461616694031621, guid: add01c438a26d1e4e9db909f585700f6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 459.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054461616694031621, guid: add01c438a26d1e4e9db909f585700f6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 311.37775
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054461616694031621, guid: add01c438a26d1e4e9db909f585700f6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 59.42231
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054461616694031621, guid: add01c438a26d1e4e9db909f585700f6, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054461616694031621, guid: add01c438a26d1e4e9db909f585700f6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054461616694031621, guid: add01c438a26d1e4e9db909f585700f6, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054461616694031621, guid: add01c438a26d1e4e9db909f585700f6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054461616694031621, guid: add01c438a26d1e4e9db909f585700f6, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054461616694031621, guid: add01c438a26d1e4e9db909f585700f6, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: add01c438a26d1e4e9db909f585700f6, type: 3}

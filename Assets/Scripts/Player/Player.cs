@@ -63,6 +63,8 @@ public class Player : MonoBehaviour
     private GameObject PauseMenu;
     private bool pauseToggled = false;
 
+    public int health = 3;
+
     private float _horizontalInput;
     private float _verticalInput;
     public bool isGrounded = false;
