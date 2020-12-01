@@ -19,7 +19,7 @@ public class SceneTrigger : MonoBehaviour
     void Update()
     {
         if(callOnStay){
-            if(Input.GetKeyDown(KeyCode.B)){
+            if(Input.GetKeyDown(KeyCode.Return)){
                 // Debug.Log("Trigger");
                 SceneManager.LoadScene(sceneNumber);
                 callOnStay = false;
@@ -31,6 +31,14 @@ public class SceneTrigger : MonoBehaviour
     {
         if (_col.gameObject.CompareTag ("DialogueTrigger")) {
             callOnStay = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D _col)
+    {
+        if (_col.gameObject.CompareTag ("DialogueTrigger")) {
+                // Debug.Log("Trigger");
+            callOnStay = false;
         }
     }
 }

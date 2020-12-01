@@ -566,7 +566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd4dec7fbf2cb94887c86bfd0d5f34e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: It's locked ...press enter
+  input: It's locked ...press 'Z'
   textColor: {r: 0, g: 0, b: 0, a: 0}
   textFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   delayBetweenText: 0.01
@@ -1418,7 +1418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd4dec7fbf2cb94887c86bfd0d5f34e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: I should probably go to bed.... press enter
+  input: I should probably go to bed.... press 'Z'
   textColor: {r: 0, g: 0, b: 0, a: 0}
   textFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   delayBetweenText: 0.01
@@ -1973,7 +1973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd4dec7fbf2cb94887c86bfd0d5f34e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: It's getting late.... press enter
+  input: It's getting late.... press 'Z'
   textColor: {r: 0, g: 0, b: 0, a: 0}
   textFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   delayBetweenText: 0.01
@@ -2343,7 +2343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd4dec7fbf2cb94887c86bfd0d5f34e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: I should probably go to bed.... press enter
+  input: I should probably go to bed.... press 'Z'
   textColor: {r: 0, g: 0, b: 0, a: 0}
   textFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   delayBetweenText: 0.01

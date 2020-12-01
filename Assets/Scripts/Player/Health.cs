@@ -15,10 +15,10 @@ public class Health : MonoBehaviour
     void Update()
     {
         if(callOnStay){
-            if(Input.GetKeyDown(KeyCode.A) && isDamage){
+            if(Input.GetKeyDown(KeyCode.Return) && isDamage){
                 playerDamage();
             }
-            else if(Input.GetKeyDown(KeyCode.A) && !isDamage){
+            else if(Input.GetKeyDown(KeyCode.Return) && !isDamage){
                 playerHeal();
             }
             else if(comingFromKillZone){
@@ -66,6 +66,14 @@ public class Health : MonoBehaviour
     private void toggleGameOver()
     {
         SceneManager.LoadScene(5);
+    }
+
+    void OnTriggerExit2D(Collider2D _col)
+    {
+        if (_col.gameObject.CompareTag ("DialogueTrigger")) {
+                // Debug.Log("Trigger");
+            callOnStay = false;
+        }
     }
 
 
