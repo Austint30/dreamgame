@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float speed = 7f;
+    public float climbSpeed = 5f;
 
     public bool isJumping {
         get {
@@ -29,6 +30,15 @@ public class Player : MonoBehaviour
             return _horizontalInput;
         }
     }
+    public bool climbing {
+        get {
+            return _climbing;
+        }
+        set {
+            _climbing = value;
+            disablePhysics = value;
+        }
+    }
 
     [SerializeField]
     private float groundJumpHeight = 2f;
@@ -46,12 +56,15 @@ public class Player : MonoBehaviour
     public bool disableInput = false;
     [System.NonSerialized]
     public GameObject groundObj;
+    [System.NonSerialized]
+    public bool disablePhysics = false;
 
     [SerializeField]
     private GameObject PauseMenu;
     private bool pauseToggled = false;
 
     private float _horizontalInput;
+    private float _verticalInput;
     public bool isGrounded = false;
 
     private bool _isJumping = false;
@@ -63,6 +76,7 @@ public class Player : MonoBehaviour
     private bool hasJumped = false;
     private bool hittingWall = false;
     private int wallHitDir = 0;
+    private bool _climbing = false;
 
     // Start is called before the first frame update
     void Start()
@@ -77,7 +91,21 @@ public class Player : MonoBehaviour
     {
         if (!disableInput)
             HandleJumping();
-        _horizontalInput = Input.GetAxis("Horizontal");
+        
+        if (climbing && isGrounded && Input.GetAxisRaw("Vertical") < 0){
+            climbing = false;
+        }
+
+        if (!climbing){
+            _horizontalInput = Input.GetAxis("Horizontal");
+            _verticalInput = Input.GetAxis("Vertical");
+        }
+        else
+        {
+            _horizontalInput = Input.GetAxisRaw("Horizontal");
+            _verticalInput = Input.GetAxisRaw("Vertical");     
+        }
+        
         if (!disableInput)
             HandleMoving();
 
@@ -124,6 +152,9 @@ public class Player : MonoBehaviour
                 _lastObjectVelocity = Vector2.zero;
             }
         }
+        if (disablePhysics){
+            _rb.velocity = Vector3.zero;
+        }
     }
 
     void HandleMoving(){
@@ -134,15 +165,19 @@ public class Player : MonoBehaviour
 
         Vector3 translation = new Vector3(_horizontalInput, 0, 0) * speed * Time.deltaTime;
 
+        if (climbing){
+            translation = new Vector3(_horizontalInput, _verticalInput, 0) * climbSpeed * Time.deltaTime;
+        }
+
         // TODO: Implement more stable horizontal movement on angles surfaces
-        if (isGrounded){
+        /*if (isGrounded){
             RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector3.down, 1f);
             Debug.DrawLine(transform.position, transform.position + Vector3.down * 1f);
             Quaternion hitAngle = Quaternion.FromToRotation(Vector3.forward, hit.normal);
             // Debug.Log(Mathf.Abs(Quaternion.Angle(hitAngle, Quaternion.Euler(0, 0, 0))));
             // if (Mathf.Abs(Quaternion.Angle(hitAngle, Quaternion.Euler(0, 0, 0)) <  ))
             translation = hitAngle * translation;
-        }
+        }*/
         transform.Translate(translation);
     }
 
