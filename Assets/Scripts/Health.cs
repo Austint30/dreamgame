@@ -36,9 +36,9 @@ public class Health : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision _col)
+    void OnCollisionEnter2D(Collision2D _col)
     {
-        if(_col.gameObject.CompareTag("DialogueTrigger") && isDamage && CanDamage()){
+        if(_col.gameObject.CompareTag("Player") && isDamage && CanDamage()){
             playerDamage();
         }
     }

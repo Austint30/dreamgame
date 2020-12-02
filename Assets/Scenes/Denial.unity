@@ -48740,6 +48740,87 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5293215e07779724585948f5d988e9a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1224442068 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6836964066951149850, guid: d82bbd1643f5e2f438a8fa3110304cf4, type: 3}
+  m_PrefabInstance: {fileID: 6836964067089076114}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1224442069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224442068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 833af18f0248aee4fb294d9857f63c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBars:
+  - {fileID: 955805777}
+  - {fileID: 955805776}
+  - {fileID: 955805775}
+  player: {fileID: 1743749071}
+  isDamage: 1
+  comingFromKillZone: 0
+--- !u!1 &1233947654
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1233947655}
+  - component: {fileID: 1233947656}
+  m_Layer: 0
+  m_Name: EnemyTrigger
+  m_TagString: DialogueTrigger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1233947655
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233947654}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1534328490}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1233947656
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233947654}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.11131692, y: 0.1298685}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.1131725, y: 2.3729115}
+  m_EdgeRadius: 0
 --- !u!1001 &1267832992
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49266,6 +49347,11 @@ Transform:
   m_Father: {fileID: 2013483088}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1534328490 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3817422046454096912, guid: 0b24d867a95ada049a3d72604ef24f00, type: 3}
+  m_PrefabInstance: {fileID: 1743749070}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1560598293
 GameObject:
   m_ObjectHideFlags: 0
@@ -49972,30 +50058,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2049630083}
   m_CullTransparentMesh: 0
---- !u!1 &2091678934 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6836964066496328598, guid: d82bbd1643f5e2f438a8fa3110304cf4, type: 3}
-  m_PrefabInstance: {fileID: 6836964067089076114}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2091678935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2091678934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 833af18f0248aee4fb294d9857f63c08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBars:
-  - {fileID: 955805777}
-  - {fileID: 955805776}
-  - {fileID: 955805775}
-  player: {fileID: 1743749071}
-  isDamage: 1
-  comingFromKillZone: 0
 --- !u!1 &2104068684
 GameObject:
   m_ObjectHideFlags: 0
