@@ -18,13 +18,13 @@ public class Platform : MonoBehaviour
     private Vector3 lastPlatformPos;
     private Vector2 _velocity;
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         nextPos = pos1.position;
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         if(transform.position == pos1.position)
         {
