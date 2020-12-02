@@ -12,6 +12,8 @@ public class Health : MonoBehaviour
     public bool comingFromKillZone;
     private bool callOnStay;
     float lastTimePlayed = 0f;
+    [SerializeField]
+    float playerMoveTimerMax = 0.2f;
 
     void Update()
     {
@@ -27,7 +29,7 @@ public class Health : MonoBehaviour
     }
 
     private bool CanDamage(){
-        float playerMoveTimerMax = 0.2f;
+       
         if(lastTimePlayed + playerMoveTimerMax < Time.time){
             lastTimePlayed = Time.time;
             return true;
