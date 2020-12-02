@@ -30,6 +30,11 @@ public class Player : MonoBehaviour
             return _horizontalInput;
         }
     }
+    public Vector2 movementInput {
+        get {
+            return new Vector2(_horizontalInput, _verticalInput);
+        }
+    }
     public bool climbing {
         get {
             return _climbing;
