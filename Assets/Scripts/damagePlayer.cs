@@ -1,4 +1,4 @@
-/*using UnityEngine; 
+using UnityEngine; 
 using System.Collections;
 
 public class damagePlayer : MonoBehaviour  {
@@ -6,10 +6,11 @@ public class damagePlayer : MonoBehaviour  {
     public int playerHealth =30;
     int damage = 10;
 
-    void Start()[
-        print(playerHealth) ;
+    void Start()
+    {
+        print(playerHealth);
 
-    ]
+    }
 
     void OnCollisionEnter(Collision _collision){
         if (_collision.gameObject.tag == "enemyDong"){
@@ -17,4 +18,4 @@ public class damagePlayer : MonoBehaviour  {
             print("player just touched something weird and health left" + playerHealth);
         }
     }
-}*/
+}
