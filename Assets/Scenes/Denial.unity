@@ -731,6 +731,7 @@ GameObject:
   - component: {fileID: 487273335}
   - component: {fileID: 487273334}
   - component: {fileID: 487273333}
+  - component: {fileID: 487273336}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Platform
@@ -845,6 +846,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &487273336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487273331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 358af1a646ce1ac42aacf5f15d88a87c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &542393363
 GameObject:
   m_ObjectHideFlags: 0
@@ -48638,7 +48651,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1200036800}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.9, y: 0.35255742, z: -113.944534}
+  m_LocalPosition: {x: 21.87, y: 0.35255742, z: -113.944534}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1834438215}
@@ -48764,6 +48777,7 @@ MonoBehaviour:
   player: {fileID: 1743749071}
   isDamage: 1
   comingFromKillZone: 0
+  playerMoveTimerMax: 0.2
 --- !u!1 &1233947654
 GameObject:
   m_ObjectHideFlags: 0
@@ -49442,6 +49456,7 @@ MonoBehaviour:
   player: {fileID: 1743749071}
   isDamage: 0
   comingFromKillZone: 1
+  playerMoveTimerMax: 0.2
 --- !u!1 &1567282323
 GameObject:
   m_ObjectHideFlags: 0
