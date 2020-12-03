@@ -30,6 +30,11 @@ public class Player : MonoBehaviour
             return _horizontalInput;
         }
     }
+    public Vector2 movementInput {
+        get {
+            return new Vector2(_horizontalInput, _verticalInput);
+        }
+    }
     public bool climbing {
         get {
             return _climbing;
@@ -142,7 +147,7 @@ public class Player : MonoBehaviour
 
     void FixedUpdate(){
         if (isGrounded){
-            Platform platformScript = groundObj.GetComponent<Platform>();
+            Platform platformScript = groundObj.GetComponentInParent<Platform>();
 
             // Match velocity of moving platforms
             if (platformScript != null){
@@ -195,7 +200,7 @@ public class Player : MonoBehaviour
 
     void HandleJumping()
     {
-
+        
         // Disable jump when dismounting from ladder
         if (Input.GetAxisRaw("Vertical") < -0.2f && _climbing){
             return;
@@ -207,7 +212,9 @@ public class Player : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             _isJumping = true;
+            EnablePhysics();
             Jump();
+            _climbing = false;
         }
         else if (isGrounded && !_isJumping){
             _currJumps = 0;
@@ -226,7 +233,9 @@ public class Player : MonoBehaviour
     }
 
     void Jump(){
-        _currJumps++;
+        if (!_climbing){
+            _currJumps++;
+        }
         hasJumped = true;
         if (isGrounded){
             _rb.velocity = new Vector2(_lastObjectVelocity.x, _lastObjectVelocity.y + HeightToVelocity(groundJumpHeight));

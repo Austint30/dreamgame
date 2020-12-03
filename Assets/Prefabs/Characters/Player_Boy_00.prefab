@@ -67,7 +67,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 487267039}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35df28ea2175f75499935032bb08946b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1963489d495f8f24f938dfd67ae0e54a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerScript: {fileID: 2917514576296812071}
@@ -263,6 +263,7 @@ MonoBehaviour:
   wallCheckTrigger: {fileID: 487267042}
   maxJumps: 1
   PauseMenu: {fileID: 0}
+  health: 3
   isGrounded: 0
 --- !u!1 &2917514577086041442
 GameObject:
@@ -624,7 +625,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8629400563194461969}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efc1cceae82c32640a844c68f45a032f, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d2282d59f45e774784483d04ed995d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerAnimator: {fileID: 62397549}

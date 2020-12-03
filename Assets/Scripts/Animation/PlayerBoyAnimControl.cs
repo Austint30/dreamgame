@@ -25,6 +25,7 @@ public class PlayerBoyAnimControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Walking on ground
         if (playerMovement.isGrounded && !playerMovement.isJumping){
             float walkSpeed = Mathf.Abs(playerMovement.horizontalInput);
             walkSpeed = walkSpeedCurve.Evaluate(walkSpeed);
@@ -36,6 +37,9 @@ public class PlayerBoyAnimControl : MonoBehaviour
             }
             playerAnimator.SetFloat("WalkSpeed", walkSpeed);
         }
+
+        playerAnimator.SetBool("Climbing", playerMovement.climbing);
+        playerAnimator.SetFloat("ClimbSpeed", playerMovement.movementInput.normalized.magnitude);
 
         if (playerMovement.isGrounded){
             hasJumped = false;
@@ -51,10 +55,17 @@ public class PlayerBoyAnimControl : MonoBehaviour
         if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0){
             lastMovDirLeft = Input.GetAxisRaw("Horizontal") < 0;
         }
-        playerSpritesContainer.rotation = Quaternion.Euler(
-            playerSpritesContainer.rotation.x,
-            lastMovDirLeft ? 180 : 0,
-            playerSpritesContainer.rotation.z
-        );
+
+        if (!playerMovement.climbing){
+            playerSpritesContainer.rotation = Quaternion.Euler(
+                playerSpritesContainer.rotation.x,
+                lastMovDirLeft ? 180 : 0,
+                playerSpritesContainer.rotation.z
+            );
+        }
+        else
+        {
+            playerSpritesContainer.rotation = Quaternion.Euler(playerSpritesContainer.rotation.x, 0, playerSpritesContainer.rotation.z);
+        }
     }
 }
