@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using TreeEditor;
+//using TreeEditor;
 using UnityEngine;
 
 public class Ground_Patrol : MonoBehaviour
@@ -40,5 +40,7 @@ public class Ground_Patrol : MonoBehaviour
                 movingRight = true;
             }
         }
+
+        //EnemySound.PlaySound(EnemySound.Sound.RatSound, MainMenuButtonsScript.sfxVol);
     }
 }

@@ -26,7 +26,7 @@ public static class SoundHub
         Sound.PowerupSound,
         Sound.PlayerTalking,
         Sound.MenuButtonSound,
-        Sound.EnterSound
+        Sound.EnterSound,
     };
 
     private static List<Sound> musicSounds = new List<Sound>(){
@@ -62,18 +62,19 @@ public static class SoundHub
     }
 
     private static bool CanPlaySound(Sound sound){
-        switch(sound){
-            default:
+
+        if(sound == Sound.PlayerMove){
+            float lastTimePlayed = 0f;
+            float playerMoveTimerMax = 0.2f;
+            if(lastTimePlayed + playerMoveTimerMax < Time.time){
+                lastTimePlayed = Time.time;
                 return true;
-            case Sound.PlayerMove:
-                float lastTimePlayed = 0f;
-                float playerMoveTimerMax = 0.2f;
-                if(lastTimePlayed + playerMoveTimerMax < Time.time){
-                    lastTimePlayed = Time.time;
-                    return true;
-                } else {
-                    return false;
-                }
+            } else {
+                return false;
+            }
+        }
+        else{
+            return true;
         }
     }
 

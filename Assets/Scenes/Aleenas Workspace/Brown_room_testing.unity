@@ -2410,8 +2410,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2017950426}
   - component: {fileID: 2017950425}
-  - component: {fileID: 2017950427}
   - component: {fileID: 2017950428}
+  - component: {fileID: 2017950427}
   m_Layer: 0
   m_Name: bed_brown
   m_TagString: Untagged
@@ -2493,10 +2493,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2017950424}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbda52da9477e4c48bc05f32d249e310, type: 3}
+  m_Script: {fileID: 11500000, guid: 61212666729147d4ca382761aa625da4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNumber: 3
+  sceneNumber: 1
 --- !u!61 &2017950428
 BoxCollider2D:
   m_ObjectHideFlags: 0
