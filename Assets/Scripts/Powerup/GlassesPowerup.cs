@@ -1,27 +1,53 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class GlassesPowerup : AbstractPowerup
 {
-    private Player playerScript;
+    private bool initialized = false;
+    private bool active = false;
     public override void Initialize(){
         base.Initialize(); // Call parent class Initialize method
-        playerScript = GetComponentInParent<Player>();
-        Debug.Log("Glasses of Truth activated!");
-        if (playerScript){
-            playerScript.speed = 15;
+        initialized = true;
+    }
+    
+    void Update(){
+        if (initialized && Input.GetButton("Glasses")){
+            Activate();
+        }
+        if (initialized && Input.GetButtonUp("Glasses")){
+            Deactivate();
         }
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+
+    void Toggle(){
+        if (active)
+            Deactivate();
+        else
+            Activate();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void Activate(){
+        active = true;
+        GlassesRevealer[] rev = FindRevealers();
+        foreach (var r in rev)
+        {
+            r.Reveal();
+        }
+    }
+
+    void Deactivate(){
+        active = false;
+        GlassesRevealer[] rev = FindRevealers();
+        foreach (var r in rev)
+        {
+            r.Hide();
+        }
+    }
+
+    private  GlassesRevealer[] FindRevealers(){
+        GameObject[] objects = GameObject.FindGameObjectsWithTag("GlassesInvisible");
+        return objects.Select(r => r.GetComponent<GlassesRevealer>()).Where(r => r != null).ToArray();
     }
 }
