@@ -9,6 +9,8 @@ TagManager:
   - Powerup
   - DialogueTrigger
   - Portal
+  - Climbable
+  - EnemyTrigger
   layers:
   - Default
   - TransparentFX
