@@ -26,6 +26,7 @@ public class PlayerBoyAnimControl : MonoBehaviour
     void Update()
     {
         if (!playerMovement) return;
+        playerAnimator.SetInteger("JumpCount", playerMovement.currentJumps);
         // Walking on ground
         if (playerMovement.isGrounded && !playerMovement.isJumping){
             float walkSpeed = Mathf.Abs(playerMovement.horizontalInput);
