@@ -61740,10 +61740,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6691462279870049568, guid: 4d5a87f5290a5cf41b87871cce7842d9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7924754076265339180, guid: 4d5a87f5290a5cf41b87871cce7842d9, type: 3}
       propertyPath: m_Name
       value: '[Powerup] GlassesOfTruth'
