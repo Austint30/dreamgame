@@ -8,6 +8,8 @@ public class GlassesRevealer : MonoBehaviour
     public bool invisibleOnStart = true;
     [Range(0, 1)]
     public float revealAlpha = 0.5f;
+    [Tooltip("Disables the game object instead of hiding. Makes it no longer interactible.")]
+    public bool disableGameObject = false;
 
     void Start(){
         if (invisibleOnStart){
@@ -17,7 +19,10 @@ public class GlassesRevealer : MonoBehaviour
 
     public void Reveal(){
         foreach (var sr in spriteRenderer)
-        {  
+        {
+            if (disableGameObject){
+                sr.gameObject.SetActive(true);
+            }
             sr.color = new Color(
                 sr.color.r,
                 sr.color.g,
@@ -30,6 +35,9 @@ public class GlassesRevealer : MonoBehaviour
     public void Hide(){
         foreach (var sr in spriteRenderer)
         {  
+            if (disableGameObject){
+                sr.gameObject.SetActive(false);
+            }
             sr.color = new Color(
                 sr.color.r,
                 sr.color.g,
