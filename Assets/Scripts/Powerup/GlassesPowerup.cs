@@ -2,14 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Cinemachine;
 
 public class GlassesPowerup : AbstractPowerup
 {
     private bool initialized = false;
     private bool active = false;
+    private GameObject glassesUI;
+
     public override void Initialize(){
         base.Initialize(); // Call parent class Initialize method
         initialized = true;
+    }
+
+    void Start(){
+        try{
+            Transform cameraTransform = Camera.main.transform;
+            glassesUI = cameraTransform.Find("Canvas/GlassesUI").gameObject;
+        }
+        catch(System.Exception e){
+            Debug.LogWarning("Could not get Glasses UI: " + e);
+        }
     }
     
     void Update(){
@@ -35,6 +48,9 @@ public class GlassesPowerup : AbstractPowerup
         {
             r.Reveal();
         }
+        if (glassesUI){
+            glassesUI.GetComponent<CanvasGroup>().alpha = 1;
+        }
     }
 
     void Deactivate(){
@@ -43,6 +59,9 @@ public class GlassesPowerup : AbstractPowerup
         foreach (var r in rev)
         {
             r.Hide();
+        }
+        if (glassesUI){
+            glassesUI.GetComponent<CanvasGroup>().alpha = 0;
         }
     }
 

@@ -17,5 +17,7 @@ public class AirEnemyMovement : Platform
 
         // Rotate the roach in the direction of travel
         spriteContainer.rotation = Quaternion.Euler(spriteContainer.rotation.x, velocity.x >=0 ? 0 : 180, spriteContainer.rotation.z);
+
+        //EnemySound.PlaySound(EnemySound.Sound.RoachSound, MainMenuButtonsScript.sfxVol);
     }
 }
