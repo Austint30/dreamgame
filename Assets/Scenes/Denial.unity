@@ -53423,6 +53423,7 @@ MonoBehaviour:
   - {fileID: 1936465780}
   invisibleOnStart: 1
   revealAlpha: 0.5
+  disableGameObject: 0
 --- !u!4 &1118162477
 Transform:
   m_ObjectHideFlags: 0
@@ -55346,11 +55347,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2917514576296812070, guid: 0b24d867a95ada049a3d72604ef24f00, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 85.74
+      value: 6.54
       objectReference: {fileID: 0}
     - target: {fileID: 2917514576296812070, guid: 0b24d867a95ada049a3d72604ef24f00, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.23
+      value: 36.16
       objectReference: {fileID: 0}
     - target: {fileID: 2917514576296812070, guid: 0b24d867a95ada049a3d72604ef24f00, type: 3}
       propertyPath: m_LocalPosition.z
