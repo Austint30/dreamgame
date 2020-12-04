@@ -6,6 +6,8 @@ using Cinemachine;
 
 public class GlassesPowerup : AbstractPowerup
 {
+    public SpriteRenderer glassesOnCharacter;
+    public PlayerBoyAnimControl playerBoyAnimControl;
     private bool initialized = false;
     private bool active = false;
     private GameObject glassesUI;
@@ -13,6 +15,10 @@ public class GlassesPowerup : AbstractPowerup
     public override void Initialize(){
         base.Initialize(); // Call parent class Initialize method
         initialized = true;
+        Player playerScript = GetComponentInParent<Player>();
+        if (playerScript && playerBoyAnimControl){
+            playerBoyAnimControl.playerMovement = playerScript;
+        }
     }
 
     void Start(){
@@ -51,6 +57,7 @@ public class GlassesPowerup : AbstractPowerup
         if (glassesUI){
             glassesUI.GetComponent<CanvasGroup>().alpha = 1;
         }
+        glassesOnCharacter.gameObject.SetActive(true);
     }
 
     void Deactivate(){
@@ -63,6 +70,7 @@ public class GlassesPowerup : AbstractPowerup
         if (glassesUI){
             glassesUI.GetComponent<CanvasGroup>().alpha = 0;
         }
+        glassesOnCharacter.gameObject.SetActive(false);
     }
 
     private  GlassesRevealer[] FindRevealers(){

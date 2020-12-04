@@ -4,100 +4,103 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 3427114271967980436
-    second: Character_0
+    second: Glasses_0
   - first:
       213: 8158605244509288230
-    second: Character_1
+    second: Glasses_1
   - first:
       213: 6184959299203262911
-    second: Character_2
+    second: Glasses_2
   - first:
       213: 2495864320845663737
-    second: Character_3
+    second: Glasses_3
   - first:
       213: 6480803066212409350
-    second: Character_4
+    second: Glasses_4
   - first:
       213: 801598655983992016
-    second: Character_5
+    second: Glasses_5
   - first:
       213: -4188724102742562465
-    second: Character_6
+    second: Glasses_6
   - first:
       213: -7635366936938300408
-    second: Character_7
+    second: Glasses_7
   - first:
       213: 3663873800218158768
-    second: Character_8
+    second: Glasses_8
   - first:
       213: 1879468920936531165
-    second: Character_9
+    second: Glasses_9
   - first:
       213: 40843185749886244
-    second: Character_10
+    second: Glasses_10
   - first:
       213: -5329091641981806550
-    second: Character_11
+    second: Glasses_11
   - first:
       213: -8425070257221301162
-    second: Character_12
+    second: Glasses_12
   - first:
       213: -2450611445237265277
-    second: Character_13
+    second: Glasses_13
   - first:
       213: 6770007078955632491
-    second: Character_14
+    second: Glasses_14
   - first:
       213: -8123166618883925514
-    second: Character_15
+    second: Glasses_15
   - first:
       213: 1737412558246731724
-    second: Character_16
+    second: Glasses_16
   - first:
       213: -7904700090360122693
-    second: Character_17
+    second: Glasses_17
   - first:
       213: 2250609068651981613
-    second: Character_18
+    second: Glasses_18
   - first:
       213: -366569187799383193
-    second: Character_19
+    second: Glasses_19
   - first:
       213: 6378490070600606727
-    second: Character_20
+    second: Glasses_20
   - first:
       213: 1760990019816550413
-    second: Character_21
+    second: Glasses_21
   - first:
       213: 5920403861974754022
-    second: Character_22
+    second: Glasses_22
   - first:
       213: -3892527970579685584
-    second: Character_23
+    second: Glasses_23
   - first:
       213: 1778907897293836937
-    second: Character_24
+    second: Glasses_24
   - first:
       213: 347220952276385629
-    second: Character_25
+    second: Glasses_25
   - first:
       213: 4391028426531969339
-    second: Character_26
+    second: Glasses_26
   - first:
       213: -8641010753147894659
-    second: Character_27
+    second: Glasses_27
   - first:
       213: 2251730768788326449
-    second: Character_28
+    second: Glasses_28
   - first:
       213: 162719226863317155
-    second: Character_29
+    second: Glasses_29
   - first:
       213: 487846217701087288
-    second: Character_30
+    second: Glasses_30
   - first:
       213: 6297648057743630840
-    second: Character_31
+    second: Glasses_31
+  - first:
+      213: -6642189541005656643
+    second: glasses_climb
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -173,7 +176,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Character_0
+      name: Glasses_0
       rect:
         serializedVersion: 2
         x: 0
@@ -194,7 +197,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_1
+      name: Glasses_1
       rect:
         serializedVersion: 2
         x: 248
@@ -215,7 +218,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_2
+      name: Glasses_2
       rect:
         serializedVersion: 2
         x: 503
@@ -236,7 +239,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_3
+      name: Glasses_3
       rect:
         serializedVersion: 2
         x: 762
@@ -257,7 +260,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_4
+      name: Glasses_4
       rect:
         serializedVersion: 2
         x: 1031
@@ -278,7 +281,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_5
+      name: Glasses_5
       rect:
         serializedVersion: 2
         x: 1307
@@ -299,7 +302,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_6
+      name: Glasses_6
       rect:
         serializedVersion: 2
         x: 1572
@@ -320,7 +323,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_7
+      name: Glasses_7
       rect:
         serializedVersion: 2
         x: 1851
@@ -341,7 +344,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_8
+      name: Glasses_8
       rect:
         serializedVersion: 2
         x: 2114
@@ -350,7 +353,7 @@ TextureImporter:
         height: 248
       alignment: 9
       pivot: {x: 0.65, y: 0.5}
-      border: {x: 0, y: 0, z: 50, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
@@ -362,7 +365,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_9
+      name: Glasses_9
       rect:
         serializedVersion: 2
         x: 0
@@ -383,7 +386,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_10
+      name: Glasses_10
       rect:
         serializedVersion: 2
         x: 314
@@ -404,7 +407,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_11
+      name: Glasses_11
       rect:
         serializedVersion: 2
         x: 580
@@ -425,7 +428,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_12
+      name: Glasses_12
       rect:
         serializedVersion: 2
         x: 851
@@ -446,7 +449,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_13
+      name: Glasses_13
       rect:
         serializedVersion: 2
         x: 1126
@@ -467,11 +470,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_14
+      name: Glasses_14
       rect:
         serializedVersion: 2
         x: 1398
-        y: 718
+        y: 719
         width: 226
         height: 253
       alignment: 9
@@ -488,7 +491,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_15
+      name: Glasses_15
       rect:
         serializedVersion: 2
         x: 1660
@@ -509,7 +512,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_16
+      name: Glasses_16
       rect:
         serializedVersion: 2
         x: 1917
@@ -530,7 +533,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_17
+      name: Glasses_17
       rect:
         serializedVersion: 2
         x: 2162
@@ -551,7 +554,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_18
+      name: Glasses_18
       rect:
         serializedVersion: 2
         x: 244
@@ -572,7 +575,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_19
+      name: Glasses_19
       rect:
         serializedVersion: 2
         x: 514
@@ -593,7 +596,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_20
+      name: Glasses_20
       rect:
         serializedVersion: 2
         x: 770
@@ -614,7 +617,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_21
+      name: Glasses_21
       rect:
         serializedVersion: 2
         x: 1039
@@ -635,7 +638,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_22
+      name: Glasses_22
       rect:
         serializedVersion: 2
         x: 1315
@@ -656,7 +659,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_23
+      name: Glasses_23
       rect:
         serializedVersion: 2
         x: 1589
@@ -677,7 +680,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_24
+      name: Glasses_24
       rect:
         serializedVersion: 2
         x: 1856
@@ -698,7 +701,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_25
+      name: Glasses_25
       rect:
         serializedVersion: 2
         x: 159
@@ -719,7 +722,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_26
+      name: Glasses_26
       rect:
         serializedVersion: 2
         x: 574
@@ -740,7 +743,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_27
+      name: Glasses_27
       rect:
         serializedVersion: 2
         x: 844
@@ -761,7 +764,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_28
+      name: Glasses_28
       rect:
         serializedVersion: 2
         x: 1108
@@ -782,7 +785,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_29
+      name: Glasses_29
       rect:
         serializedVersion: 2
         x: 1399
@@ -803,7 +806,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_30
+      name: Glasses_30
       rect:
         serializedVersion: 2
         x: 1652
@@ -824,7 +827,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_31
+      name: Glasses_31
       rect:
         serializedVersion: 2
         x: 1912
@@ -840,6 +843,27 @@ TextureImporter:
       bones: []
       spriteID: 8f1ec3aca8db56750800000000000000
       internalID: 6297648057743630840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glasses_climb
+      rect:
+        serializedVersion: 2
+        x: 2261
+        y: 422
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbdfa85edc332d3a0800000000000000
+      internalID: -6642189541005656643
       vertices: []
       indices: 
       edges: []
