@@ -38,8 +38,8 @@ public static class SoundHub
 
     private static GameObject oneShotGameObject;
     private static AudioSource oneShotAudioSource;
-    public static float musicVolume = 0.07f;
-    public static float sfxVolume = 0.07f;
+    public static float musicVolume = 1f;
+    public static float sfxVolume = 1f;
 
     public static void PlaySound(Sound sound, float volume = 0.07f){
         if(CanPlaySound(sound)){
@@ -65,7 +65,7 @@ public static class SoundHub
 
         if(sound == Sound.PlayerMove){
             float lastTimePlayed = 0f;
-            float playerMoveTimerMax = 0.2f;
+            float playerMoveTimerMax = 0.7f;
             if(lastTimePlayed + playerMoveTimerMax < Time.time){
                 lastTimePlayed = Time.time;
                 return true;
