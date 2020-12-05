@@ -21,6 +21,7 @@ public class SoundAssets : MonoBehaviour
     [Serializable]
     public class SoundAudioClip{
         public SoundHub.Sound sound;
+        //public EnemySound.Sound soundE;
         public AudioClip audioClip;
     }
 }

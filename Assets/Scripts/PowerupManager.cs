@@ -37,6 +37,7 @@ public class PowerupManager : MonoBehaviour
         AbstractPowerup pScript = objectTransform.GetComponent<AbstractPowerup>();
         objectTransform.parent = powerupCollection;
         objectTransform.localPosition = Vector3.zero;
+        objectTransform.localRotation = Quaternion.Euler(0,0,0);
         if (sr != null){
             sr.sortingOrder = powerupSpriteSortingOrder;
         }
