@@ -13,17 +13,14 @@ EditorBuildSettings:
     guid: ba6479eb7cb597343b1ebbd83af924c9
   - enabled: 1
     path: Assets/Scenes/Aleenas Workspace/Brown_room_testing.unity
-    guid: 35225eea4423a8246b99545b6d7c144e
+    guid: 1957d1ada5d0fd04caeac1d4c5f65ef8
   - enabled: 1
     path: Assets/Scenes/Aleenas Workspace/Green_room_testing.unity
-    guid: 2b3334d730d560045896a1e2109402ea
+    guid: 2ee3491a4e245644882bac7f79d8470d
   - enabled: 1
     path: Assets/Scenes/Denial.unity
     guid: e056bbbd50e00a049805f9c216fbf6c0
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 6d40f5973939edb4187a71102ade569c
-  - enabled: 1
-    path: Assets/Scenes/Anger.unity
-    guid: bb6fbe023692a124b8540282b1f5be81
   m_configObjects: {}

@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6327494164057369812}
   - component: {fileID: 4007084047690224097}
   - component: {fileID: 7035605040488659600}
-  - component: {fileID: 8052751184573109592}
   m_Layer: 0
   m_Name: RoachSprite
   m_TagString: Untagged
@@ -105,26 +104,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8052751184573109592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3076662861388498021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 833af18f0248aee4fb294d9857f63c08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBars:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  player: {fileID: 0}
-  isDamage: 1
-  comingFromKillZone: 0
-  playerMoveTimerMax: 0.2
 --- !u!1 &6836964065761544835
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,6 +173,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6836964066496328599}
+  - component: {fileID: 5381788567588834424}
+  - component: {fileID: 4308015502594068266}
   m_Layer: 0
   m_Name: Air enemy
   m_TagString: Untagged
@@ -218,6 +199,86 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5381788567588834424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6836964066496328598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 833af18f0248aee4fb294d9857f63c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBars:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  player: {fileID: 0}
+  isDamage: 1
+  comingFromKillZone: 0
+  playerMoveTimerMax: 0.2
+--- !u!60 &4308015502594068266
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6836964066496328598}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.72939587, y: 0.07927585}
+      - {x: 0.6485181, y: 0.13112342}
+      - {x: 0.6305909, y: 0.25987363}
+      - {x: 0.718101, y: 0.5012171}
+      - {x: 0.530808, y: 0.19555497}
+      - {x: 0.4322629, y: 0.27653813}
+      - {x: 0.39269876, y: 0.5012951}
+      - {x: 0.47278547, y: 0.6950804}
+      - {x: 0.37245798, y: 0.4943354}
+      - {x: 0.23844671, y: 0.45236903}
+      - {x: -0.10985422, y: 0.8896022}
+      - {x: -0.76119375, y: 1.1014925}
+      - {x: -0.6628182, y: 0.79314405}
+      - {x: -0.4709196, y: 0.64262575}
+      - {x: -0.26124477, y: 0.5491205}
+      - {x: 0.011572361, y: 0.4267943}
+      - {x: 0.045622826, y: 0.38156217}
+      - {x: -0.92205864, y: 0.2437717}
+      - {x: -1.0510039, y: 0.1587137}
+      - {x: -0.85515976, y: 0.0162853}
+      - {x: -1.2609875, y: -0.35686636}
+      - {x: -1.1723044, y: -0.4218763}
+      - {x: -1.080749, y: -0.65677834}
+      - {x: -0.98816323, y: -0.4580387}
+      - {x: -0.8179755, y: -0.47890198}
+      - {x: -0.5664339, y: -0.41735947}
+      - {x: -0.46831894, y: -0.64158463}
+      - {x: -0.4317236, y: -0.3926319}
+      - {x: -0.17742443, y: -0.33193207}
+      - {x: 0.14265871, y: -0.24356437}
+      - {x: 0.4302926, y: -0.35344136}
+      - {x: 0.24587011, y: -0.20773864}
+      - {x: 0.59171534, y: -0.2799182}
+      - {x: 0.61678326, y: -0.20731127}
+      - {x: 0.76981974, y: 0.026287973}
 --- !u!1 &6836964066951149850
 GameObject:
   m_ObjectHideFlags: 0

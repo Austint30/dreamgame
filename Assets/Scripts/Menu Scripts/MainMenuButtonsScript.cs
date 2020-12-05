@@ -7,18 +7,18 @@ using UnityEngine.Audio;
 
 public class MainMenuButtonsScript : MonoBehaviour
 {
-    public static float sfxVol = 0.07f;
+    private float sfxVol = 0.07f;
 
     public void PlayGame () {
         PlayMenuSound();
         System.Threading.Thread.Sleep(1000);
-        SceneManager.LoadScene(2); //will have to change this with where current player last saved if already started game
+        SceneManager.LoadScene(1); //will have to change this with where current player last saved if already started game
     }
 
     public void ContinueScene () {
         PlayMenuSound();
         System.Threading.Thread.Sleep(1000);
-        SceneManager.LoadScene(3); //will have to change this with where current player last saved if already started game
+        SceneManager.LoadScene(2); //will have to change this with where current player last saved if already started game
     }
 
     public void QuitGame()

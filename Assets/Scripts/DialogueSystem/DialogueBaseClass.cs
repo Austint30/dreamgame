@@ -8,12 +8,7 @@ using UnityEngine.UI;
 // {
     public class DialogueBaseClass : MonoBehaviour
     {
-        public bool finished {get; protected set;}
-
-        protected IEnumerator WaitForZPress(){
-            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z));
-            finished = true;
-        }
+        public bool finished {get; private set;}
 
         protected IEnumerator WriteText(string input, Text textHolder, Color textColor, Font textFont, float delayBetweenText, AudioClip sound, int soundDelay, bool changeOnDelay, float delayBetweenLines) //
         {
@@ -34,7 +29,7 @@ using UnityEngine.UI;
                 yield return new WaitForSeconds(delayBetweenLines);
             }
             else{
-                yield return WaitForZPress();
+                yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z));
             }
             
             finished = true;

@@ -27,9 +27,6 @@ using UnityEngine.UI;
         [Header ("Character Settings")]
         [SerializeField] private Sprite characterSprite;
         [SerializeField] private Image imageHolder;
-        
-        private IEnumerator writeText;
-        private bool cancelTextAnim = false;
 
         private void Awake()
         {
@@ -40,23 +37,10 @@ using UnityEngine.UI;
             imageHolder.preserveAspect = true;
         }
 
-        void Update(){
-            if (cancelTextAnim){
-                StartCoroutine(WaitForZPress());
-                cancelTextAnim = false;
-            }
-            // Skip text writing animation
-            if (Input.GetKeyDown(KeyCode.Z) && !finished){
-                StopCoroutine(writeText);
-                textHolder.text = input;
-                cancelTextAnim = true;
-            }
-        }
-
         private void Start()
         {
-            writeText = WriteText(input, textHolder, textColor, textFont, delayBetweenText, sound, soundDelay, changeOnDelay, delayBetweenLines);
-            StartCoroutine(writeText);
+
+            StartCoroutine(WriteText(input, textHolder, textColor, textFont, delayBetweenText, sound, soundDelay, changeOnDelay, delayBetweenLines));
 
         } 
     }
