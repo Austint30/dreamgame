@@ -13,8 +13,6 @@ public class Portal : MonoBehaviour
     public int destinationSceneNum;
     [Tooltip("The portal that the player exits in the chosen destination scene.")]
     public string destinationPortalLabel;
-    public GameObject transitionEnterObject;
-    public GameObject transitionExitObject;
     [Tooltip("Custom spawn point of where the object coming through the portal will exit. Defaults to parent GameObject transform")]
     public Transform spawnPoint = null;
 
@@ -23,8 +21,12 @@ public class Portal : MonoBehaviour
     public Vector3 spawnPosition;
     protected Portal otherPortal = null;
 
-    void Start(){
-        spawnPosition = spawnPoint != null ? spawnPoint.TransformPoint(spawnPoint.position) : transform.position;
+    protected virtual void Start(){
+        spawnPosition = spawnPoint != null ? spawnPoint.position : transform.position;
+    }
+
+    public virtual void OnObjectExit(GameObject obj){
+        
     }
 
     public virtual void Trigger(GameObject passingObject){
@@ -60,7 +62,13 @@ public class Portal : MonoBehaviour
             porScript = portal.GetComponent<Portal>();
             if (porScript && porScript.uniqueLabel == destinationPortalLabel){
                 Debug.Log("Portal \"" + destinationPortalLabel + "\" found! Moving object to portal position...");
+                if (passingObject.GetComponent<Collider2D>()){
+                    passingObject.GetComponent<Collider2D>().enabled = false;
+                }
                 passingObject.transform.position = porScript.spawnPosition;
+                if (passingObject.GetComponent<Collider2D>()){
+                    passingObject.GetComponent<Collider2D>().enabled = true;
+                }
                 otherPortal = porScript;
                 found = true;
                 break;
@@ -81,5 +89,8 @@ public class Portal : MonoBehaviour
 
         Destroy(this.gameObject);
         onFinished(passingObject, porScript);
+        if (otherPortal){
+            otherPortal.OnObjectExit(passingObject);
+        }
     }
 }
