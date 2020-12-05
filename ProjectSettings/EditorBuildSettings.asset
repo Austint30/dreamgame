@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Anger.unity
     guid: bb6fbe023692a124b8540282b1f5be81
+  - enabled: 1
+    path: Assets/Scenes/ToBeContinued.unity
+    guid: 415de8af95b51c04f9b702916e123483
   m_configObjects: {}
