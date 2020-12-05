@@ -6,6 +6,7 @@ public class PlayerBoyAnimControl : MonoBehaviour
 {
     public Animator playerAnimator;
     public Player playerMovement;
+    public PlayerHealth playerHealth;
     public AnimationCurve walkSpeedCurve = new AnimationCurve(new Keyframe(0, 0), new Keyframe(0.5f, 1, 1.3f, 1.3f), new Keyframe(1, 1.5f));
 
     [Tooltip("Transform that contains all character visual elements. This transform will be flipped right and left depending on which direction the player is moving.")]
@@ -25,6 +26,9 @@ public class PlayerBoyAnimControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!playerMovement) return;
+        playerAnimator.SetInteger("JumpCount", playerMovement.currentJumps);
+        playerAnimator.SetBool("Dead", playerHealth.currentHealth >= 0);
         // Walking on ground
         if (playerMovement.isGrounded && !playerMovement.isJumping){
             float walkSpeed = Mathf.Abs(playerMovement.horizontalInput);
@@ -56,16 +60,20 @@ public class PlayerBoyAnimControl : MonoBehaviour
             lastMovDirLeft = Input.GetAxisRaw("Horizontal") < 0;
         }
 
-        if (!playerMovement.climbing){
-            playerSpritesContainer.rotation = Quaternion.Euler(
-                playerSpritesContainer.rotation.x,
-                lastMovDirLeft ? 180 : 0,
-                playerSpritesContainer.rotation.z
-            );
+        if (playerSpritesContainer != null){
+            if (!playerMovement.climbing){
+                playerSpritesContainer.rotation = Quaternion.Euler(
+                    playerSpritesContainer.rotation.x,
+                    lastMovDirLeft ? 180 : 0,
+                    playerSpritesContainer.rotation.z
+                );
+            }
+            else
+            {
+                playerSpritesContainer.rotation = Quaternion.Euler(playerSpritesContainer.rotation.x, 0, playerSpritesContainer.rotation.z);
+            }
         }
-        else
-        {
-            playerSpritesContainer.rotation = Quaternion.Euler(playerSpritesContainer.rotation.x, 0, playerSpritesContainer.rotation.z);
-        }
+
+        
     }
 }

@@ -170,6 +170,7 @@ GameObject:
   - component: {fileID: 2917514576296812069}
   - component: {fileID: 2917514576296812068}
   - component: {fileID: 2917514576296812071}
+  - component: {fileID: 8126220243370302986}
   m_Layer: 0
   m_Name: Player_Boy_00
   m_TagString: Player
@@ -265,6 +266,26 @@ MonoBehaviour:
   PauseMenu: {fileID: 0}
   health: 3
   isGrounded: 0
+--- !u!114 &8126220243370302986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2917514576296812065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8672055271979314297fb9543ca560cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  invincibilityTimeInSecs: 4
+  spritesToBlink: []
+  defaultDamageKnockbackStrength: 3
+  currentHealth: 0
+  stunned: 0
+  stunDuration: 1
+  damageBlinkRate: 0.2
 --- !u!1 &2917514577086041442
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,6 +651,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerAnimator: {fileID: 62397549}
   playerMovement: {fileID: 2917514576296812071}
+  playerHealth: {fileID: 8126220243370302986}
   walkSpeedCurve:
     serializedVersion: 2
     m_Curve:

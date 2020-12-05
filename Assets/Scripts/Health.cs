@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class Health : MonoBehaviour
 {
     public Image[] healthBars;
-    public Player player;
     public bool isDamage;
     public bool comingFromKillZone;
     private bool callOnStay;
@@ -19,7 +18,12 @@ public class Health : MonoBehaviour
     {
         if(callOnStay){
             if(Input.GetKeyDown(KeyCode.Return) && !isDamage){
-                playerHeal();
+                GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+                if (playerObj){
+                    Player player = playerObj.GetComponent<Player>();
+                    if (player)
+                        playerHeal(player);
+                }
                 callOnStay = false;
             }
             else if(comingFromKillZone){
@@ -40,13 +44,15 @@ public class Health : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D _col)
     {
-        if(_col.gameObject.CompareTag("Player") && isDamage && CanDamage()){
-            playerDamage();
+        Player player = _col.gameObject.GetComponentInParent<Player>();
+        if(player && isDamage && CanDamage()){
+            playerDamage(player);
         }
     }
 
     void OnTriggerStay2D(Collider2D _col)
     {
+        Player player = _col.gameObject.GetComponentInParent<Player>();
         if (_col.gameObject.CompareTag ("DialogueTrigger")) {
             callOnStay = true;
         }
@@ -59,7 +65,7 @@ public class Health : MonoBehaviour
         }
     }
 
-    public void playerDamage()
+    public void playerDamage(Player player)
     {
         if(player.health > 0) player.health--;
         if(player.health == 2){
@@ -74,7 +80,7 @@ public class Health : MonoBehaviour
         }
     }
 
-    public void playerHeal()
+    public void playerHeal(Player player)
     {
         if(player.health < 3) player.health++;
         if(player.health == 3){

@@ -147,7 +147,9 @@ public class Player : MonoBehaviour
 
     void FixedUpdate(){
         if (isGrounded){
-            Platform platformScript = groundObj.GetComponentInParent<Platform>();
+            Platform platformScript = null;
+            if (groundObj)
+                groundObj.GetComponentInParent<Platform>();
 
             // Match velocity of moving platforms
             if (platformScript != null){
