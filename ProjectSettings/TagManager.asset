@@ -12,6 +12,7 @@ TagManager:
   - Climbable
   - EnemyTrigger
   - GlassesInvisible
+  - HealthBar
   layers:
   - Default
   - TransparentFX

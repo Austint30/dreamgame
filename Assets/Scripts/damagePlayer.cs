@@ -8,7 +8,7 @@ public class damagePlayer : MonoBehaviour  {
 
     void Start()
     {
-        print(playerHealth);
+        // print(playerHealth);
 
     }
 

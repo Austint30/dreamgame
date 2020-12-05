@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 6327494164057369812}
   - component: {fileID: 4007084047690224097}
   - component: {fileID: 7035605040488659600}
-  - component: {fileID: 8052751184573109592}
+  - component: {fileID: 4619325721899363041}
+  - component: {fileID: 4660010197951127940}
   m_Layer: 0
   m_Name: RoachSprite
   m_TagString: Untagged
@@ -29,9 +30,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 8517683769170904956}
-  - {fileID: 6705735577263202793}
+  m_Children: []
   m_Father: {fileID: 6836964066951149851}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -105,7 +104,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8052751184573109592
+--- !u!114 &4619325721899363041
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,17 +113,44 @@ MonoBehaviour:
   m_GameObject: {fileID: 3076662861388498021}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 833af18f0248aee4fb294d9857f63c08, type: 3}
+  m_Script: {fileID: 11500000, guid: de0b9501dbff9b84f80e911657930fdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBars:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  player: {fileID: 0}
-  isDamage: 1
-  comingFromKillZone: 0
-  playerMoveTimerMax: 0.2
+  subtractHealth: 1
+  instantKill: 0
+  knockPlayerBack: 1
+  knockBackStrength: 10
+--- !u!60 &4660010197951127940
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3076662861388498021}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.4, y: 2.4}
+    newSize: {x: 2.24, y: 1.29}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.95, y: -0.55}
+      - {x: -0.53, y: -0.07}
+      - {x: 0.45, y: 0.13}
+      - {x: 0.81, y: 0.089999996}
+      - {x: 0.95, y: -0.14999999}
+      - {x: 0.64, y: -0.22999999}
 --- !u!1 &6836964065761544835
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,7 +253,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6836964066951149851}
-  - component: {fileID: 6836964066951149848}
   - component: {fileID: 4484457582447905248}
   m_Layer: 0
   m_Name: Roach
@@ -251,19 +276,6 @@ Transform:
   m_Father: {fileID: 6836964066496328599}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6836964066951149848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6836964066951149850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90d323bee9a7348e0851b76532a3fdad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerHealth: 30
 --- !u!114 &4484457582447905248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,97 +294,3 @@ MonoBehaviour:
   timeToMove: 1
   startFromPos2: 0
   spriteContainer: {fileID: 6327494164057369812}
---- !u!1 &8105250655592693730
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6705735577263202793}
-  - component: {fileID: 953075350354811665}
-  m_Layer: 0
-  m_Name: CollisionHead
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6705735577263202793
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8105250655592693730}
-  m_LocalRotation: {x: -0, y: -0, z: 0.6046692, w: 0.7964767}
-  m_LocalPosition: {x: 0.6908194, y: -0.048020214, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6327494164057369812}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 74.41}
---- !u!70 &953075350354811665
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8105250655592693730}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.32, y: 0.46}
-  m_Direction: 0
---- !u!1 &8325795746103635198
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8517683769170904956}
-  - component: {fileID: 5083237858812893633}
-  m_Layer: 0
-  m_Name: CollisionBody
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8517683769170904956
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8325795746103635198}
-  m_LocalRotation: {x: -0, y: -0, z: -0.5954679, w: 0.8033791}
-  m_LocalPosition: {x: -0.096, y: -0.183, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6327494164057369812}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -73.092}
---- !u!70 &5083237858812893633
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8325795746103635198}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.44, y: 1.36}
-  m_Direction: 0
