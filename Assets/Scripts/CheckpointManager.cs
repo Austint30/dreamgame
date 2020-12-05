@@ -18,7 +18,11 @@ public class CheckpointManager : MonoBehaviour
         lastCheckpointLocation = location;
     }
 
-    public IEnumerator LoadCheckpoint(){
+    public void LoadCheckPoint(){
+        StartCoroutine(LoadCheckpointIEN());
+    }
+
+    public IEnumerator LoadCheckpointIEN(){
         if (_objToRespawn == null) yield break;
         AsyncOperation sceneLoad = SceneManager.LoadSceneAsync(lastScene.name, LoadSceneMode.Single);
         _objToRespawn.gameObject.SetActive(false);

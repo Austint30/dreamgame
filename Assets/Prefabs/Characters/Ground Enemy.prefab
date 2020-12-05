@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 53966006823293954}
   - component: {fileID: 53966006823293957}
   - component: {fileID: 53966006823293956}
-  - component: {fileID: 53966006823293955}
   - component: {fileID: 1712529634424407457}
-  - component: {fileID: 119035652889687805}
+  - component: {fileID: 4005371286171631955}
+  - component: {fileID: 1718746296}
   m_Layer: 0
   m_Name: Ground Enemy
   m_TagString: Untagged
@@ -102,32 +102,6 @@ MonoBehaviour:
   distance: 1
   speed: 3
   groundDetection: {fileID: 53966007482609924}
---- !u!61 &53966006823293955
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 53966006823293959}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.33, y: 1.78}
-    newSize: {x: 2.33, y: 1.78}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!95 &1712529634424407457
 Animator:
   serializedVersion: 3
@@ -147,7 +121,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &119035652889687805
+--- !u!114 &4005371286171631955
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -156,17 +130,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 53966006823293959}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 833af18f0248aee4fb294d9857f63c08, type: 3}
+  m_Script: {fileID: 11500000, guid: de0b9501dbff9b84f80e911657930fdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBars:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  player: {fileID: 0}
-  isDamage: 0
-  comingFromKillZone: 0
-  playerMoveTimerMax: 0.2
+  subtractHealth: 1
+  instantKill: 0
+  knockPlayerBack: 1
+  knockBackStrength: 14
+--- !u!58 &1718746296
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53966006823293959}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.65
 --- !u!1 &53966007482609927
 GameObject:
   m_ObjectHideFlags: 0

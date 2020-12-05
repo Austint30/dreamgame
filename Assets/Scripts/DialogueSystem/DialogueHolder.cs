@@ -25,7 +25,7 @@ using UnityEngine.UI;
         {
             if(player != null){
             player.disableInput = true;
-
+            Time.timeScale = 0;
             }
             for(int i = 0; i < transform.childCount; i++){
                 Deactivate();
@@ -33,8 +33,9 @@ using UnityEngine.UI;
                 yield return new WaitUntil(() => transform.GetChild(i).GetComponent<DialogueLine>().finished);
             }
             gameObject.SetActive(false);
+            Time.timeScale = 1;
             if(player != null){
-            player.disableInput = false;
+                player.disableInput = false;
                 
             }
         }

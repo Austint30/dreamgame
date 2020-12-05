@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SingletonMainCamera : MonoBehaviour
+public class Singleton : MonoBehaviour
 {
     private static int refCount = 0;
-    public static SingletonMainCamera instance;
+    public static Singleton instance;
 
     void Awake(){
         refCount++;

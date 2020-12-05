@@ -27,11 +27,11 @@ using UnityEngine.UI;
                     SoundHub.PlaySound(SoundHub.Sound.PlayerTalking);
 
                 }
-                yield return new WaitForSeconds(delayBetweenText);
+                yield return new WaitForSecondsRealtime(delayBetweenText);
             }
 
             if(changeOnDelay){
-                yield return new WaitForSeconds(delayBetweenLines);
+                yield return new WaitForSecondsRealtime(delayBetweenLines);
             }
             else{
                 yield return WaitForZPress();

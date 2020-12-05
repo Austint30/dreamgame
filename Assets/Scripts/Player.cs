@@ -69,7 +69,6 @@ public class Player : MonoBehaviour
     public GameObject groundObj;
 
     [SerializeField]
-    private GameObject PauseMenu;
     private bool pauseToggled = false;
 
     public int health = 3;
@@ -123,20 +122,22 @@ public class Player : MonoBehaviour
         if (!disableInput)
             HandleMoving();
 
+        GameObject PauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
+
         //handle quit game at any point in the game, so as to not get stuck
         if(Input.GetKeyDown(KeyCode.Q)){
             Application.Quit();
         }
         else if(Input.GetKeyDown(KeyCode.Escape) && !pauseToggled){
             Time.timeScale = 0;
-            PauseMenu.SetActive(true);
+            PauseMenu.GetComponent<Canvas>().enabled = true;
             pauseToggled = true;
             Debug.Log("PauseToggled");
         }
         else if(Input.GetKeyDown(KeyCode.Escape) && pauseToggled){
             Debug.Log("PauseUnToggled");
             Time.timeScale = 1;
-            PauseMenu.SetActive(false);
+            PauseMenu.GetComponent<Canvas>().enabled = false;
             pauseToggled = false;
         }
         // Terminal Velocity

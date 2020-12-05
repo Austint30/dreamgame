@@ -24,6 +24,9 @@ public class PlayerHealth : MonoBehaviour
     [Header("Visual Properties")]
     public float damageBlinkRate = 0.2f;
 
+    [Header("Game Over")]
+    public int gameOverScene = -1;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -64,6 +67,7 @@ public class PlayerHealth : MonoBehaviour
             SubtractHealth(healthPts);
             StartCoroutine(BeginInvincibility());
             UpdateHealthBar(currentHealth);
+            CheckDead();
         }
     }
 
@@ -85,7 +89,13 @@ public class PlayerHealth : MonoBehaviour
             }
             StartCoroutine(BeginInvincibility());
             UpdateHealthBar(currentHealth);
+            CheckDead();
         }
+    }
+
+    public void Heal(int healthPts){
+        AddHealth(healthPts);
+        UpdateHealthBar(currentHealth);
     }
 
     private IEnumerator BeginInvincibility(){
@@ -138,6 +148,11 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
     }
 
+    private void AddHealth(int healthPts){
+        currentHealth += healthPts;
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+    }
+
     private void SetSpritesVisible(bool visible){
         foreach (var sprite in spritesToBlink)
         {
@@ -147,9 +162,11 @@ public class PlayerHealth : MonoBehaviour
     }
 
     private void CheckDead(){
-        if (currentHealth <= 0){
-            DontDestroyOnLoad(this);
+        if (currentHealth <= 0 && gameOverScene > -1){
+            DontDestroyOnLoad(this.gameObject);
             gameObject.SetActive(false);
+            Camera.main.gameObject.SetActive(false);
+            SceneManager.LoadScene(gameOverScene);
         }
     }
 }

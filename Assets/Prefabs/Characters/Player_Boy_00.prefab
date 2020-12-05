@@ -280,9 +280,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   invincibilityTimeInSecs: 4
-  spritesToBlink: []
+  spritesToBlink:
+  - {fileID: 8769345840134102831}
   defaultDamageKnockbackStrength: 3
-  currentHealth: 0
+  currentHealth: 3
   stunned: 0
   stunDuration: 1
   damageBlinkRate: 0.2
