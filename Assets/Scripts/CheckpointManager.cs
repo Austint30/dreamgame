@@ -23,7 +23,11 @@ public class CheckpointManager : MonoBehaviour
     }
 
     public IEnumerator LoadCheckpointIEN(){
-        if (_objToRespawn == null) yield break;
+        if (_objToRespawn == null) {
+            Debug.Log("Need object to respawn.");
+            yield break;
+        };
+        Debug.Log("Loading checkpoint in scene " + lastScene.name);
         AsyncOperation sceneLoad = SceneManager.LoadSceneAsync(lastScene.name, LoadSceneMode.Single);
         _objToRespawn.gameObject.SetActive(false);
         _objToRespawn.transform.position = lastCheckpointLocation;
