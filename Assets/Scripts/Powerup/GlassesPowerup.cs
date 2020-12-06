@@ -24,7 +24,7 @@ public class GlassesPowerup : AbstractPowerup
     void Start(){
         try{
             Transform cameraTransform = Camera.main.transform;
-            glassesUI = cameraTransform.Find("GlobalGameUI/GlassesUI").gameObject;
+            glassesUI = cameraTransform.Find("Canvas/GlassesUI").gameObject;
         }
         catch(System.Exception e){
             Debug.LogWarning("Could not get Glasses UI: " + e);
