@@ -163,9 +163,9 @@ public class PlayerHealth : MonoBehaviour
 
     private void CheckDead(){
         if (currentHealth <= 0 && gameOverScene > -1){
+            Debug.Log("Game Over!");
             DontDestroyOnLoad(this.gameObject);
             gameObject.SetActive(false);
-            Camera.main.gameObject.SetActive(false);
             SceneManager.LoadScene(gameOverScene);
         }
     }

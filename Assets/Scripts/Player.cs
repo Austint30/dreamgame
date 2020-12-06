@@ -4,6 +4,18 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    private static int refCount = 0;
+    public static Player instance;
+
+    void Awake(){
+        refCount++;
+        if (refCount > 1){
+            Destroy(this.gameObject);
+        }
+        instance = this;
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     public float speed = 7f;
     public float climbSpeed = 5f;
 
@@ -293,6 +305,13 @@ public class Player : MonoBehaviour
 
     public void EnablePhysics(){
         _rb.constraints = originalConstraints;
+    }
+
+    void OnDestroy() {
+        refCount--;
+        if (refCount < 0){
+            instance = null;
+        }
     }
 
 }
