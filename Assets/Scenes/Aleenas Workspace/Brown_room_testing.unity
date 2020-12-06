@@ -823,7 +823,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 873408015}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4010820164782678282, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -855,7 +855,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4010820164782678282, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4010820164782678282, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -939,11 +939,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
---- !u!224 &499170705 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4010820164782678282, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
-  m_PrefabInstance: {fileID: 499170704}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &543269737
 GameObject:
   m_ObjectHideFlags: 0
@@ -8306,37 +8301,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 848399160}
   m_CullTransparentMesh: 0
---- !u!1 &873408014
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 873408015}
-  m_Layer: 0
-  m_Name: PauseMenu
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &873408015
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 873408014}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 678.6224, y: 569.54205, z: -356.17276}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 499170705}
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &874380607
 GameObject:
   m_ObjectHideFlags: 0
@@ -9100,7 +9064,7 @@ PrefabInstance:
     - target: {fileID: 2917514576296812071, guid: 0b24d867a95ada049a3d72604ef24f00, type: 3}
       propertyPath: PauseMenu
       value: 
-      objectReference: {fileID: 873408014}
+      objectReference: {fileID: 0}
     - target: {fileID: 2917514576296812071, guid: 0b24d867a95ada049a3d72604ef24f00, type: 3}
       propertyPath: playerHealth
       value: 

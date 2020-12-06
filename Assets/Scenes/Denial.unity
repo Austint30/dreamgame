@@ -105559,7 +105559,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1567282324}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4010820164782678282, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -105591,7 +105591,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4010820164782678282, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 4010820164782678282, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -105651,11 +105651,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
---- !u!224 &1267832993 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4010820164782678282, guid: 0bbee12323706e64ca0902c79833fac7, type: 3}
-  m_PrefabInstance: {fileID: 1267832992}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1320599117
 GameObject:
   m_ObjectHideFlags: 0
@@ -106585,37 +106580,6 @@ MonoBehaviour:
   isDamage: 0
   comingFromKillZone: 1
   playerMoveTimerMax: 0.2
---- !u!1 &1567282323
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1567282324}
-  m_Layer: 0
-  m_Name: PauseMenu
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1567282324
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1567282323}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 543.9956, y: 370.45126, z: -176.05771}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1267832993}
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1574462774
 PrefabInstance:
   m_ObjectHideFlags: 0
